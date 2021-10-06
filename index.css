@@ -1,12 +1,21 @@
-/* body {
-    background-color: radial-gradient(41.48% 11.48% at 2.38% 8.52%, #38A3A5 0%, rgba(34, 87, 122, 0) 100%), linear-gradient(135deg, #AED6F1 0%, #57CC99 100%);
-}  */
+.navbar-brand {
+    font-family: 'Gluten', cursive;
+}
+.logo {
+    color: white;
+    font-size: 120%;
+    
+}
+.alinear {
+    display: flex;
+    align-items: center;
+}
 body{
     background:linear-gradient(180deg, #202978 0%, #57CC99 100%); 
     min-block-size: 100vh; 
 }
 .color {
-    background-color: #22577a4f;
+    background-color: #22577a82;
 }
 
 .opciones {
