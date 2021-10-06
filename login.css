@@ -1,0 +1,51 @@
+.navbar-brand {
+    font-family: 'Gluten', cursive;
+}
+.logo {
+    color: white;
+    font-size: 120%;
+    
+}
+.alinear {
+    display: flex;
+    align-items: center;
+}   
+body{
+    background:linear-gradient(180deg, #202978 0%, #57CC99 100%); 
+    min-block-size: 100vh; 
+}
+.opciones {
+    display: flex;
+    justify-content: space-around;
+}
+
+.opcion1 {
+    margin-right: 20px;
+}
+.container{
+    width: auto;
+    max-width: 400px;
+    overflow: hidden;
+    margin:auto;
+    padding: 60px 0;
+}
+.bxs-user{
+    font-size: 70px;
+}
+.card {
+    background-color: #a1b6f159;
+    border-radius: 20px;
+}
+.letras {
+    display: flex;
+    justify-content: space-around;
+}
+.form-control {
+    border-radius: 20px;
+    width: 90%;
+    padding: 20px;
+    margin: 0 auto;
+}
+.btn:hover {
+    background-color: rgb(20, 255, 16, 0.84);
+    }
