@@ -46,6 +46,6 @@ body{
     padding: 20px;
     margin: 0 auto;
 }
-.btn:hover {
-    background-color: rgb(20, 255, 16, 0.84);
+.btn {
+    background-color: #00FF19;
     }
