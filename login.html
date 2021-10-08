@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/css/login.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gluten:wght@700&display=swap" rel="stylesheet">
+    <!---icono-user-->
+    <link rel="stylesheet" href="boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <title>LOGIN</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-light color">
+            <a class="navbar-brand alinear" href="#">
+                <span class="logo">EASTER EGG</span>
+                <img src="src/img/huevito.png" height="40" class="d-inline-block align-top" alt="">
+            </a>
+            <div class="opciones">
+                <a class="opcion1" href="info.html">
+                    Acerca de nosotros
+                </a>
+                <a class="opcion2">
+                    Contactanos
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container ">
+        <div id="formulario">
+            <div class="card  text-center">
+                <form id="form1">
+                    <div class="icono">
+                        <i class='bx bxs-user'></i>
+                    </div>
+                    <h1 class="text-center">Login</h1>
+                    <br />
+                    <div class="form-group text-center">
+                        <p>Correo electronico</p>
+                        <label for="" class="sr-only">correo</label>
+                        <input id= "email" type= "email" class= "form-control" 
+                            autofocusid="validationCustom01" value="" required>
+                        <div class="valid-feedback">
+                            listo!
+                        </div>
+                    </div>
+                    <div class="form-group text-center">
+                        <p>Contraseña</p>
+                        <label for="" class="sr-only">contraseña</label>
+                        <input id= "password" type= "password" class= "form-control"
+                            autofocusautofocusid="validationCustom01" value="" required>
+                        <div class="valid-feedback">
+                            listo!
+                        </div>
+                    </div>
+                    <div class="letras">
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                            <label class="form-check-label" for="exampleCheck1">
+                                Recuerdame
+                            </label>
+                        </div>    
+                        <a href="#">
+                            ¿Olvido su contraseña?
+                        </a>
+                    </div>
+                    <br />
+                    <div>
+                        <button id="submit " class="btn btn-primary">Login</button>
+                    </div>
+                    <br />
+                </form>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
