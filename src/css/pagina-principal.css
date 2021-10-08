@@ -1,29 +1,3 @@
-body{
-    background:linear-gradient(180deg, #202978 0%, #57CC99 100%); 
-    min-block-size: 100vh; 
-}
-
-.navbar-brand {
-    font-family: 'Gluten', cursive;
-}
-.logo {
-    color: white;
-    font-size: 120%;
-    
-}
-.color {
-    background-color: #22577a82;
-}
-
-.opciones {
-    display: flex;
-    justify-content: space-around;
-}
-
-.opcion1 {
-    margin-right: 20px;
-}
-
 /*Parte de la izquierda*/
 .titulo-y-huevo{
     display: flex;
