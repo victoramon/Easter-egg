@@ -1,0 +1,28 @@
+
+body{
+    background:linear-gradient(180deg, #202978 0%, #57CC99 100%); 
+    min-block-size: 100vh; 
+    color: white;
+}
+.w-100 {
+    height: 559px;
+}
+h5 {
+    text-align: center;
+    justify-content: center;
+} 
+p {
+    text-align: center;
+    justify-content: center;
+}
+.d-block{
+object-fit: contain;
+}
+.bx:hover{
+   
+    background: #bc63f8;
+    color: lightcoral;
+    border:1px solid blueviolet;
+    border: radius 50%;
+    font-size: 20px;
+}

@@ -1,0 +1,53 @@
+/*Parte de la izquierda*/
+.titulo-y-huevo{
+    display: flex;
+}
+.titulo-y-huevo h2{
+    font-size: 60px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    -webkit-text-stroke: 1px #00FFF0;
+
+}
+.titulo-y-huevo img{
+    width: 20%;
+    margin-left: 20%;
+}
+.text-design h3, h4{
+    color: white;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    -webkit-text-stroke: 1px #00FFF0;
+}
+
+.linea{
+    border-top: 2px solid white;
+}
+.linea2{
+    border-right: 2px solid white;
+}
+/*Formulario*/
+
+.form__register{
+    background: rgba(87, 204, 153, 0.41);
+box-shadow: 0px 4px 4px rgba(34, 242, 255, 0.5);
+border-radius: 4rem;
+padding: 2rem;
+display: grid;
+}
+
+.form__register--btn{
+    color:black;
+    background: #00FF19;
+border-radius: 126px;
+justify-self: center;
+}
+
+.form__register input{
+    border-radius: 1rem;
+}
+.btn--login{
+    margin: 1rem auto;
+    display: flex;
+}
+.formulario{
+    font-size: 20px;
+}
