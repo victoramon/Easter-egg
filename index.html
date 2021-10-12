@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="src/css/pagina-principal.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <link rel="stylesheet" href="./src/css/boton.css">
         <link href="https://fonts.googleapis.com/css2?family=Gluten:wght@700&display=swap" rel="stylesheet">
         <title>Pagina Principal</title>
     </head>
@@ -51,7 +53,7 @@
                             <!--referencia-->
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row pt-1">
                         <div class="col-5">
                             <!--referencia-->
                         </div>
@@ -59,11 +61,11 @@
                             <img src="src/img/image 20.png" />
                         </div>
                     </div>
-                    <div class="row mt-5">
-                        <div class="col-8">
+                    <div class="row mt-5 mt-2">
+                        <div class="col-8 mt-4">
                             <h3>Unete a Easter Egg hoy mismo</h3>
                         </div>
-                        <div class="col-4">
+                        <div class="col-4 img-arow mt-4">
                             <img src="src/img/Union.png" />
                         </div>
                     </div>
@@ -71,7 +73,7 @@
 
                 <!--formulario-->
                 <div class="col formulario">
-                    <form class="form__register mt-5"> 
+                    <form class="form__register mt-1"> 
                         <div class="form-group">
                           <label for="InputEmail1">Correo Electronico</label>
                           <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp">
@@ -88,9 +90,19 @@
                           <input type="checkbox" class="form-check-input" id="exampleCheck1">
                           <label class="form-check-label" for="exampleCheck1">Acepto terminos y condiciones</label>
                         </div>
-                        <button " type="submit" class="btn btn-primary form__register--btn"><a href="registro.html" >¡Registrarme!</a></button>
+                        <button type="submit" class="form__register--btn button button--janus">
+                            <a href="registro.html">
+                                <span>¡Registo!</span>
+                            </a>
+                        </button>
                       </form>
-                      <a href="login.html"> <button type="button" class="btn btn-primary form__register--btn btn--login">Ya tengo cuenta</button></a>
+                      <a href="login.html"> 
+                        <button type="button" class="form__register--btn button button--telesto">
+                            <span>
+                                <span> Ya tengo cuenta </span>
+                            </span>
+                        </button>
+                    </a>
                 </div>
 
                 

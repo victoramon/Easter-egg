@@ -1,6 +1,15 @@
 .navbar-brand {
     font-family: 'Gluten', cursive;
 }
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    background-color: #202978;
+    top: 0;
+    z-index: 5;
+}
+
 .logo {
     color: white;
     font-size: 120%; 
@@ -12,9 +21,6 @@
 body{
     background:linear-gradient(180deg, #202978 0%, #57CC99 100%); 
     min-block-size: 100vh; 
-}
-.color {
-    background-color: #22577a82;
 }
 
 .opciones {
