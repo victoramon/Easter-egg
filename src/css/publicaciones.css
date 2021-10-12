@@ -1,0 +1,128 @@
+.navbar-brand {
+    font-family: 'Gluten', cursive;
+}
+.logo {
+    color: white;
+    font-size: 120%; 
+}
+.alinear {
+    display: flex;
+    align-items: center;
+}
+body{
+    background:linear-gradient(180deg, #202978 0%, #57CC99 100%); 
+    min-block-size: 100vh; 
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+    width: 7px;
+    background-color: green;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: royalblue;
+    border-radius: 5px;
+}
+.color {
+    background-color: #22577a82;
+}
+ 
+.opciones {
+    display: flex;
+    justify-content: space-around;
+}
+ 
+.opcion {
+    color: white;
+    margin-right: 20px;
+}
+ 
+.bloque {
+    margin-top: 1rem;  
+}
+ 
+.card {
+    margin-top: 1rem;
+}
+/*color al fondo de la pantalla cuando se abra la ventana emergente*/
+.overlay{
+    background: rgba(153, 224, 250, 0.466);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+
+}
+/*para ser visible la ventana emergente*/
+.overlay.active{
+    visibility: visible;
+}
+/*style a la ventna emergente y elementos que lo contiene*/
+.pop-up{
+    background: rgba(248, 249, 252, 0.801);
+    box-shadow: 0px 0px 10px 0px rgba(250, 249, 252, 0.959);
+    border-radius:5px;
+    padding:18px;
+    text-align: center;
+    width: 300px;
+
+}
+.pop-up .boton-cerrar-pop-up{
+    font-size: 16px;
+    line-height: 16px;
+    display:block;
+    text-align: right;
+    color: rgb(27, 81, 117);
+    transition: 3px ease all;
+
+}
+.pop-up .boton-cerrar-pop-up:hover{
+    color: cyan;
+    font-size: 20px;
+}
+.text-public{
+ font-size: 25px; 
+ margin-bottom: 10px;  
+ color: blue;
+ /*opacity: 0px;*/
+}
+.pop-up form .contenedor-texto textarea{
+width: 100%;
+margin-bottom: 20px;
+height: 130px;
+line-height: 50px;
+text-align: center;
+border:1px solid rgba(0, 0, 255, 0.438);
+border-radius: 3px;
+}
+
+.pop-up form .submit {
+    padding: 0 10px;
+    height: 40px;
+    border: none;
+    color: rgb(237, 236, 243);
+    background-color: rgba(22, 185, 22, 0.87);
+    font-size: 15px;
+    border: radius 3px;
+    cursor: pointer;
+    transition: .3s  ease all;
+}
+.pop-up form .submit:hover{
+    background: rgb(24, 27, 219, .9);
+}
+.pop-btn{
+    padding: 0 10px;
+    height: 40px;
+    border: none;
+    color: rgb(237, 236, 243);
+    background-color: rgba(25, 156, 218, 0.87);
+    font-size: 15px;
+    border: radius 3px;
+    cursor: pointer;
+}
+
+
