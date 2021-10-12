@@ -1,0 +1,19 @@
+.grid{
+    background-color: rgba(236, 229, 220, 0.233);
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: auto;
+    gap: 2em;
+}
+/* .jugador{
+    background-color: rgb(199, 233, 233);
+}
+.jugador-profile{
+    align-self: center;
+}
+.publicaciones{
+    background-color: bisque;
+}
+.recomendaciones{
+    background-color: rgb(141, 80, 255);
+} */
