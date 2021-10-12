@@ -1,9 +1,9 @@
 .grid{
     background-color: rgba(236, 229, 220, 0.233);
     display: grid;
-    grid-template-columns: 30% 30% 30%;
+    grid-template-columns: 25% 50% 25%;
     grid-template-rows: auto;
-    gap: 2em;
+    gap: 1em;
 }
 /* .jugador{
     background-color: rgb(199, 233, 233);
@@ -17,3 +17,8 @@
 .recomendaciones{
     background-color: rgb(141, 80, 255);
 } */
+
+.img-container img{
+    margin: 10px auto;
+    width: auto;
+}
