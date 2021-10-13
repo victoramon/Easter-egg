@@ -1,28 +1,46 @@
-.body {
-    overflow-x: hidden;
+.info-jugador{
+    border: 3px solid white;
+    text-align: center;
+    color: white;
 }
-.grid{
-    background-color: rgba(236, 229, 220, 0.233);
-    display: grid;
-    grid-template-columns: 25% 50% 23%;
-    grid-template-rows: auto;
-
+h2{
+    font-size: 34px;
 }
-
-.grid {
-    margin-top: 100px;
+.info-jugador img{
+    width: 100%;
+    border-radius: 50% 50%;
 }
-
-
-.jugador-profile{
-    align-self: center;
+.botones{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 55%;
 }
-
-.card{
-    margin-top: 20px;
+.lista-info{
+    font-size: 30px;
 }
 
-.img-container img{
-    margin: 10px auto;
-    width: auto;
+/*CARROUSEL*/
+.vert .carousel-item-next.carousel-item-left,
+.vert .carousel-item-prev.carousel-item-right {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.vert .carousel-item-next,
+.vert .active.carousel-item-right {
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100% 0);
+}
+
+.vert .carousel-item-prev,
+.vert .active.carousel-item-left {
+-webkit-transform: translate3d(0,-100%, 0);
+        transform: translate3d(0,-100%, 0);
+}
+/*FONDO DEL CARROUSEL*/
+.bloques-imagenes{
+    color:white;
+    text-align: center;
+    background: rgba(78, 129, 123, 0.53);
 }
