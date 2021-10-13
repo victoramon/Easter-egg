@@ -21,6 +21,7 @@
 body{
     background:linear-gradient(180deg, #202978 0%, #57CC99 100%); 
     min-block-size: 100vh; 
+    margin-top:100px;
 }
 
 .opciones {
