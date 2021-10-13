@@ -1,3 +1,6 @@
+/* .container{
+    margin-top: 100px;
+} */
 /*Parte de la izquierda*/
 .titulo-y-huevo{
     display: flex;
@@ -12,6 +15,7 @@
     width: 20%;
     margin-left: 20%;
 }
+
 .text-design h3, h4{
     color: white;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -26,12 +30,20 @@
 }
 /*Formulario*/
 
+.img-arow{
+    animation: movimiento 1s infinite linear;
+}
+
 .form__register{
     background: rgba(87, 204, 153, 0.41);
 box-shadow: 0px 4px 4px rgba(34, 242, 255, 0.5);
 border-radius: 4rem;
 padding: 2rem;
 display: grid;
+}
+
+.formulario a{
+    justify-self: center;
 }
 
 .form__register--btn{
@@ -50,11 +62,15 @@ justify-self: center;
 }
 .formulario{
     font-size: 20px;
+    display: grid;
+    gap:2rem;
 }
 
-.img-arow{
-    animation: movimiento 1s infinite linear;
+.button--janus span {
+    color: beige;
 }
+
+
 
 @keyframes movimiento{
     0%{ 
@@ -66,5 +82,46 @@ justify-self: center;
     }
     100%{
         transform: translateX(0);
+    }
+}
+
+@media (max-width: 991px) {
+
+    .titulo-y-huevo img{
+        width: 8rem;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .linea{
+        border: none;
+    }
+
+    .linea2{
+        border: none;
+        margin-bottom: 1rem;
+    }
+
+ 
+    .linea2 div:not(:nth-child(1)){
+        display: none;
+    }
+
+    .linea2 div:nth-child(4){
+        display: flex;
+    }
+
+   /*  .linea2 .row .img-arow{
+        display: block;
+    } */
+
+
+}
+
+@media (max-width: 575px){
+    .titulo-y-huevo img{
+        margin-left: 0;
     }
 }
