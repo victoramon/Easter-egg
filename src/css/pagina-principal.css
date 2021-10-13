@@ -4,16 +4,18 @@
 /*Parte de la izquierda*/
 .titulo-y-huevo{
     display: flex;
+    align-items: center;
 }
 .titulo-y-huevo h2{
     font-size: 60px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    -webkit-text-stroke: 1px #00FFF0;
+    font-family: 'Gluten', cursive;
+    color: white;
 
 }
 .titulo-y-huevo img{
     width: 20%;
-    margin-left: 20%;
+    margin-left: auto;
 }
 
 .text-design h3, h4{
@@ -70,21 +72,6 @@ justify-self: center;
     color: beige;
 }
 
-
-
-@keyframes movimiento{
-    0%{ 
-        transform: translateX(0);
-
-    }
-    50%{
-        transform: translateX(0.5rem);
-    }
-    100%{
-        transform: translateX(0);
-    }
-}
-
 @media (max-width: 991px) {
 
     .titulo-y-huevo img{
@@ -94,6 +81,9 @@ justify-self: center;
 }
 
 @media (max-width: 767px) {
+    body{
+        margin-top: 50px;
+    }
 
     .linea{
         border: none;
@@ -113,15 +103,17 @@ justify-self: center;
         display: flex;
     }
 
-   /*  .linea2 .row .img-arow{
-        display: block;
-    } */
-
-
 }
 
-@media (max-width: 575px){
-    .titulo-y-huevo img{
-        margin-left: 0;
+@keyframes movimiento{
+    0%{ 
+        transform: translateX(0);
+
+    }
+    50%{
+        transform: translateX(0.5rem);
+    }
+    100%{
+        transform: translateX(0);
     }
 }
