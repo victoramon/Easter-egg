@@ -14,14 +14,6 @@ body{
     min-block-size: 100vh; 
     overflow-x: hidden;
 }
-body::-webkit-scrollbar {
-    width: 7px;
-    background-color: green;
-}
-body::-webkit-scrollbar-thumb {
-    background-color: royalblue;
-    border-radius: 5px;
-}
 .color {
     background-color: #22577a82;
 }
