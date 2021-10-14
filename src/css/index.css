@@ -1,3 +1,9 @@
+body{
+    background:linear-gradient(180deg, #202978 0%, #57CC99 100%); 
+    min-block-size: 100vh; 
+    margin-top:100px;
+}
+
 .navbar-brand {
     font-family: 'Gluten', cursive;
 }
@@ -18,22 +24,26 @@
     display: flex;
     align-items: center;
 }
-body{
-    background:linear-gradient(180deg, #202978 0%, #57CC99 100%); 
-    min-block-size: 100vh; 
-    margin-top:100px;
+
+.navbar .opciones {
+    justify-content: flex-end;
 }
 
-.opciones {
-    display: flex;
-    justify-content: space-around;
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0,0,0,.5);
+    color: white;
+}
+
+.navbar .navbar-toggler .bx{
+    color: white;
+    font-size: 40px;
+}
+
+.navbar .nav-item i{
+    font-size: 25px;
 }
 
 .opcion1 {
     margin-right: 20px;
-    color: white;
-}
-
-.opcion2 {
     color: white;
 }
