@@ -3,6 +3,14 @@ body{
     min-block-size: 100vh; 
     margin-top:100px;
 }
+body::-webkit-scrollbar {
+    width: 7px;
+    background-color: #202978;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #57CC99;
+    border-radius: 5px;
+}
 
 .navbar-brand {
     font-family: 'Gluten', cursive;
