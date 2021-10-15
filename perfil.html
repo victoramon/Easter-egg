@@ -17,6 +17,8 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
     <link rel="stylesheet" href="src/css/index.css">
+    <script src="/src/js/perfil.js"></script>
+
     <title>Perfil</title>
 </head>
 
@@ -42,24 +44,38 @@
             <!--Columna 1-->
             <div class="col-3 columna1">
                 <!--Foto de perfil-->
-                <img class="circular mt-5" src="https://c8.alamy.com/compes/2ac4pjh/un-resumen-de-la-imagen-de-fondo-de-forma-cuadrada-2ac4pjh.jpg" />
+                <a href="">
+                    <img onclick="alerta()" class="circular mt-5" src="/src/img/fotodeperfil.png" />
+                </a>
                 <!--Botones de seguir y mensaje-->
                 <div class="mt-5">
-                    <h2>Nombre del Jugador</h2>
+                    <h2>El gamer PRO</h2>
                     <div class="botones mt-4 mb-5">
-                        <!--Boton follow-->
-                        <button>
-                            <img src="http://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c325.png"/>                        </button>
-                        <!--Boton mensaje-->
-                        <button>
-                            <img src="/src/img/iconomensaje.gif"/>
-                        </button>
+                        <div class="row">
+                            <div class="col-2"></div>
+                            <div class="col-4">
+                                <a onclick="alerta()">
+                                <img src="src/img/corazon.png" />
+                                </a>
+                                <div>
+                                    <h4>2183</h4>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <img src="/src/img/mensaje.png" />
+                                <div>
+                                    <h4>5</h4>
+                                </div>
+                            </div>
+                            <div class="col-2"></div>
+
+                        </div>
                     </div>
                 </div><!--  Cierre div de botones-->
                 <!--Informacion del jugador-->
                 <div>
                     <h2>Acerca del jugador</h2>
-                    <ul class="lista-info">
+                    <ul class="lista-info mt-5">
                         <li class="mt-3">Juegos probados en esta semana</li>
                         <li class="mt-3">Publicaciones</li>
                         <li class="mt-3">Numero de horas activo en la plataforma</li>
@@ -103,7 +119,7 @@
             <!--Columna 3 -->
             <div class="col-3">
                 <div class="bloque-de-imagenes"><!--Bloque de imagenes-->
-                        <h2 class="mt-5 mb-5">RECOMENDACIONES</h2>
+                        <h2 class="mt-5 mb-5">Recomendaciones</h2>
                         <div class="carrousell">
                             <body translate="no" >
                                 <div class='carousel'>
