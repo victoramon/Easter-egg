@@ -152,7 +152,7 @@ body{
   position: fixed;
   background: rgba(247, 255, 254, 0.15);
   max-width: 100%;
-  min-height: 80%;
+  min-height: 88%;
 
 }
 
@@ -163,4 +163,17 @@ body{
 .columna1{
   text-align: center;
   color: white;
+}
+.tres-columnas{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.recomendaciones{
+  margin: 0 auto;
+  min-width: 23%;
+}
+.bloque-de-imagenes div h4{
+
+font-size: 550%;
 }
