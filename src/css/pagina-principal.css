@@ -10,10 +10,6 @@ body{
     background-position: center;
 }
 
-.navbar {
-    background-color: transparent;
-}
-
 /*Parte de la izquierda*/
 .titulo-y-huevo{
     display: flex;
