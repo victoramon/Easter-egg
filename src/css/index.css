@@ -1,0 +1,57 @@
+body{
+    background:linear-gradient(180deg, #202978 0%, #57CC99 100%); 
+    min-block-size: 100vh; 
+    padding-top:100px;
+}
+body::-webkit-scrollbar {
+    width: 7px;
+    background-color: #202978;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #57CC99;
+    border-radius: 5px;
+}
+
+.navbar-brand {
+    font-family: 'Gluten', cursive;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    background-color: #202978;
+    top: 0;
+    z-index: 5;
+}
+
+.logo {
+    color: white;
+    font-size: 120%; 
+}
+.alinear {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .opciones {
+    justify-content: flex-end;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0,0,0,.5);
+    color: white;
+}
+
+.navbar .navbar-toggler .bx{
+    color: white;
+    font-size: 40px;
+}
+
+.navbar .nav-item i{
+    font-size: 25px;
+}
+
+.opcion1 {
+    margin-right: 20px;
+    color: white;
+}

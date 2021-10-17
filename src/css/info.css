@@ -4,6 +4,7 @@ body{
     min-block-size: 100vh; 
     color: white;
 }
+
 .w-100 {
     height: 559px;
 }
@@ -18,11 +19,18 @@ p {
 .d-block{
 object-fit: contain;
 }
-.bx:hover{
-   
-    background: #bc63f8;
-    color: lightcoral;
-    border:1px solid blueviolet;
+.col-4 .bx{
+    display: flex;
+    justify-content: center;
+    border: 1px solid rgba(46, 116, 148, 0.808);
     border: radius 50%;
     font-size: 20px;
+    cursor: pointer;
 }
+.bx:hover{
+   
+    color: rgb(116, 224, 219);
+    border:1px solid blueviolet;
+    
+}
+

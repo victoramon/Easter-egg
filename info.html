@@ -3,9 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="src/css/info.css" type="text/css">
+    <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gluten:wght@700&display=swap" rel="stylesheet">
@@ -18,18 +21,35 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-light color">
-            <a href="index.html" class="navbar-brand alinear" href="#">
+        <nav class="navbar navbar-expand-lg navbar-light color">
+            <a class="navbar-brand alinear" href="index.html">
                 <span class="logo">EASTER EGG</span>
-                <img src="src/img/huevito.png" height="40" class="d-inline-block align-top" alt="">
+                <img src="src/img/huevito.png" height="40"
+                class="d-inline-block align-top" alt="" />
             </a>
-            <div class="opciones">
-                <a href="index.html" class="opcion1">
-                    Inicio
-                </a>
-                <a href="contacto.html" class="opcion2">
-                    Contactanos
-                </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bx bx-menu"></i>                
+            </button>
+
+              <div class="collapse navbar-collapse opciones" id="navbarSupportedContent">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link opcion1" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link opcion1" href="contacto.html">Contactanos</a>
+                      </li>                         
+                      <li class="nav-item">
+                        <a class="nav-link opcion1 " href="publicaciones.html">Publicaciones</a>
+                      </li>                          
+                      <li class="nav-item">
+                        <a class="nav-link opcion1 " href="perfil.html">
+                            <i class="bx bx-user-circle"></i>
+                        </a>
+                      </li>
+                  </ul>
+         
             </div>
         </nav>
     </header>
@@ -52,11 +72,10 @@
                         <h5>Javier Eduardo Serrano Alvarado
                         </h5>
                         <p>25 años</p>
-                        <p>Java Full Stack Jr Develope</p>
+                        <p>Java Full Stack Jr Developer</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia voluptates, similique libero facere eligendi necessitatibus! Laboriosam vitae ipsam doloremque inventore alias veniam accusantium soluta modi eveniet! Molestiae ipsa cumque facilis?</p>
-                        
-                            <i class='bx bxl-github'></i>
-                            <i class='bx bxl-linkedin-square'></i>
+                            <i class='bx bxl-github'><a href="https://github.com/JavierSerranoAlvarado">GitHub</a></i>
+                            <i class='bx bxl-linkedin-square'><a href="https://www.linkedin.com/in/javiersadev/">linkedin</a></i>
                        
                     <div col-2></div>
                     
@@ -75,8 +94,8 @@
                         <p>Java Full Stack Jr Developer</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia voluptates, similique libero facere eligendi necessitatibus! Laboriosam vitae ipsam doloremque inventore alias veniam accusantium soluta modi eveniet! Molestiae ipsa cumque facilis?</p>
                         
-                            <i class='bx bxl-github'></i>
-                            <i class='bx bxl-linkedin-square'></i>
+                            <i class='bx bxl-github'><a href="https://github.com/victoramon">GitHub</a></i>
+                            <i class='bx bxl-linkedin-square'><a href="https://www.linkedin.com/in/victor-manuel-marcos-a519b5221/ ">linkedin</a></i>
                         
                     <div col-2></div>
                     
@@ -95,8 +114,8 @@
                         <p>26 años</p>
                         <p>Java Full Stack Jr Developer</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sed veniam consectetur aliquid sint maiores aperiam, doloremque aspernatur accusantium velit ducimus et reiciendis tempore tempora molestiae odio. Voluptatibus, voluptate minus!</p>
-                        <i class='bx bxl-github'></i>
-                        <i class='bx bxl-linkedin-square'></i>
+                        <i class='bx bxl-github'><a href="https://github.com/DaniaAlmazanSanchez">GitHub</a></i>
+                        <i class='bx bxl-linkedin-square'><a href="https://www.linkedin.com/in/dania-almazan-17ab3321a/">linkedin</a></i>
                     
                 <div col-2></div>
                     </div>
@@ -104,15 +123,16 @@
             </div>
             <div class="carousel-item">
                 <div class="row">
-                    <img src="src/img/perro3.jpg" class="d-block w-100 col-6" alt="...">
-                    <div class="col-6">
+                    <img src="src/img/karina.jpg" class="d-block w-100 col-6" alt="...">
+                    <div class="col-4">
                         <h5>Karina Jacqueline Alvarez Melgarejo</h5>
                         <p>23 años</p>
                         <p>Java Full Stack Jr Developer</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia voluptates, similique libero facere eligendi necessitatibus! Laboriosam vitae ipsam doloremque inventore alias veniam accusantium soluta modi eveniet! Molestiae ipsa cumque facilis?</p>
                        
-                            <i class='bx bxl-github'></i>
-                            <i class='bx bxl-linkedin-square'></i>
+                            <i class='bx bxl-github'><a href="https://github.com/jacqueline00-00">GitHub</a></i>
+                            <i class='bx bxl-linkedin-square'><a href="https://www.linkedin.com/in/karina-alvarez-5458b8222/">linkedin</a></i>
+                            
                         
                     <div col-2></div>
                     
@@ -131,9 +151,9 @@
                         <p>19 años</p>
                         <p>Java Full Stack Jr Developer</p>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero nihil dolorum iusto accusamus illum. Eligendi atque impedit, illo at reiciendis nemo facilis unde optio nostrum deleniti numquam, porro enim odio.</p>
-                        <i class='bx bxl-github'></i>
-                        <i class='bx bxl-linkedin-square'></i>
-                    
+                        <i class='bx bxl-github'><a href="https://github.com/Alan-Mejia">GitHub</a></i>
+                        <i class='bx bxl-linkedin-square'><a  href="https://www.linkedin.com/in/alan-mejia-martinez-5793741aa/">linkedin</a></i>
+                   
                 <div col-2></div>
                     </div>
                 </div>
@@ -152,15 +172,16 @@
                         <p>Java Full Stack Jr Developer</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia voluptates, similique libero facere eligendi necessitatibus! Laboriosam vitae ipsam doloremque inventore alias veniam accusantium soluta modi eveniet! Molestiae ipsa cumque facilis?</p>
                         <div>
-                            <i class='bx bxl-github'></i>
-                            <i class='bx bxl-linkedin-square'></i>
+                            <i class='bx bxl-github'><a href="https://github.com/DaveR0sman">GitHub</a></i>
+                            <i class='bx bxl-linkedin-square'><a href="https://www.linkedin.com/mwlite/in/david-perez-ruiz-608714221">linkedin</a></i>
+                            
                         </div>
                     <div col-2></div>
                     </div> 
                     
                 </div>
             </div>
-            
+            <footer></footer>
             
         <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
