@@ -1,3 +1,15 @@
+body{    
+    background: linear-gradient( 
+180deg, #00000000, #1e3d496b), url('../img/fondoLogeo.jpg');
+    min-block-size: 100vh;
+    padding-top: 100px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .navbar {
+    background-color: transparent;
+}
 
 .container{
     width: auto;
@@ -6,6 +18,15 @@
     margin:auto;
     padding: 60px 0;
 }
+
+#formulario{
+    backdrop-filter: blur(6px);
+}
+
+#formulario a{
+    color: black;
+}
+
 .bxs-user{
     font-size: 70px;
 }
@@ -26,3 +47,11 @@
 .btn {
     background-color: #00FF19;
     }
+
+@media (max-width: 991px) {
+    
+        .navbar {
+            background-color: #20785a4a;
+        }
+    
+}

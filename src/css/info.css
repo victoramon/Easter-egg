@@ -1,9 +1,16 @@
+body {
+    background-image: linear-gradient(
+180deg, #00000070, #0000007a), url('../img/fondoInfo.jpg');
 
-body{
-    background:linear-gradient(180deg, #202978 0%, #57CC99 100%); 
-    min-block-size: 100vh; 
+    background-position: center;
+    background-size: cover;
     color: white;
 }
+
+.navbar {
+    background-color: transparent;
+}
+
 .w-100 {
     height: 559px;
 }
@@ -16,20 +23,50 @@ p {
     justify-content: center;
 }
 .d-block{
-object-fit: contain;
-}
-.col-4 .bx{
-    display: flex;
-    justify-content: center;
-    border: 1px solid rgba(46, 116, 148, 0.808);
-    border: radius 50%;
-    font-size: 20px;
-    cursor: pointer;
-}
-.bx:hover{
-   
-    color: rgb(116, 224, 219);
-    border:1px solid blueviolet;
-    
+    object-fit: contain;
 }
 
+/*contenedor social*/
+.social-media{
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+     
+}
+
+/* iconos social*/ 
+ .icono-social{
+    display: inline-block;
+    margin-left: 3%;
+    width: 52px;
+    height: 52px;
+    border-radius: 1px solid rgb(139, 37, 139);
+    border-radius: 50%;
+    text-align: center;
+    color:rgb(238, 245, 248);
+          
+}
+
+/*color de fondo*/
+.icono-social:hover{
+    background: #f1eff1;
+    color: rgb(50, 164, 240);
+
+}
+
+/*icono tamaño*/
+.icono-social  .bx{
+    font-size: 26px;
+    line-height: 60px;
+}
+
+
+@media (max-width: 991px) {
+    
+    .navbar {
+        background-color: #8486864a;
+    }
+
+}

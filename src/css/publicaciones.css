@@ -1,32 +1,15 @@
-.navbar-brand {
-    font-family: 'Gluten', cursive;
-}
-.logo {
-    color: white;
-    font-size: 120%; 
-}
-.alinear {
-    display: flex;
-    align-items: center;
-}
 body{
-    background:linear-gradient(180deg, #202978 0%, #57CC99 100%); 
-    min-block-size: 100vh; 
-    overflow-x: hidden;
-}
+    background-image: url('../img/906751.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+
+
 .color {
     background-color: #22577a82;
 }
  
-.opciones {
-    display: flex;
-    justify-content: space-around;
-}
- 
-.opcion {
-    color: white;
-    margin-right: 20px;
-}
  
 .bloque {
     margin-top: 1rem;  
@@ -51,7 +34,8 @@ body{
 }
 /*para ser visible la ventana emergente*/
 .overlay.active{
-    visibility: visible;
+   /* visibility: visible;
+   /*  z-index: 100; */
 }
 /*style a la ventna emergente y elementos que lo contiene*/
 .pop-up{
