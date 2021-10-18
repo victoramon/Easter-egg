@@ -1,8 +1,14 @@
+body {
+    background-image: linear-gradient(
+180deg, #00000070, #0000007a), url('../img/fondoInfo.jpg');
 
-body{
-    background:linear-gradient(180deg, #202978 0%, #57CC99 100%); 
-    min-block-size: 100vh; 
+    background-position: center;
+    background-size: cover;
     color: white;
+}
+
+.navbar {
+    background-color: transparent;
 }
 
 .w-100 {
@@ -57,3 +63,10 @@ p {
 }
 
 
+@media (max-width: 991px) {
+    
+    .navbar {
+        background-color: #8486864a;
+    }
+
+}

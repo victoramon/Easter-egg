@@ -1,15 +1,30 @@
-body{
-    background-image: linear-gradient(rgb(0 0 0 / 48%), rgb(0 0 0 / 38%)), url(../img/fondoRegistro.jpeg);
-    background-attachment: fixed;
-    background-size: cover;
+body{    
+    background: linear-gradient( 
+180deg, #00000000, #1e3d496b), url('../img/fondoLogeo.jpg');
+    min-block-size: 100vh;
+    padding-top: 100px;
     background-position: center;
+    background-size: cover;
   }
+
+  .navbar {
+    background-color: transparent;
+}
+
 .container{
     width: auto;
     max-width: 400px;
     overflow: hidden;
     margin:auto;
     padding: 60px 0;
+}
+
+#formulario{
+    backdrop-filter: blur(6px);
+}
+
+#formulario a{
+    color: black;
 }
 
 .bxs-user{
@@ -32,3 +47,11 @@ body{
 .btn {
     background-color: #00FF19;
     }
+
+@media (max-width: 991px) {
+    
+        .navbar {
+            background-color: #20785a4a;
+        }
+    
+}
