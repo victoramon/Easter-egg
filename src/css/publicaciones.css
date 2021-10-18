@@ -26,7 +26,7 @@
 }
 /*para ser visible la ventana emergente*/
 .overlay.active{
-    visibility: visible;
+   /* visibility: visible;
    /*  z-index: 100; */
 }
 /*style a la ventna emergente y elementos que lo contiene*/
