@@ -65,15 +65,30 @@ justify-self: center;
 }
 
 .contacto__direccion{
+    flex-direction: column;
     display:flex;
     align-items:center;
     justify-content: center;
     border-left: 1px solid white;
 }
 
+.parrafo__contacto{
+    display:flex;
+    justify-content: center;
+}
 .contacto__direccion p{
-    max-width: 60%;
+    max-width: 80%;
     font-size: 20px;
+    text-align: center;
+    align-items:center;
+    justify-content: center;
+    align-self: center;
+}
+
+
+
+.contacto__direccion {
+    align-self: center;
 }
 
 @media (max-width: 767px) {
