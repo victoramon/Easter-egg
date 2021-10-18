@@ -15,23 +15,41 @@
     <!---icono-user-->
     <link rel="stylesheet" href="boxicons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <title>LOGIN</title>
+    <title>Registro</title>
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-light color">
+        <nav class="navbar navbar-expand-lg navbar-light color">
             <a class="navbar-brand alinear" href="index.html">
                 <span class="logo">EASTER EGG</span>
                 <img src="src/img/huevito.png" height="40" class="d-inline-block align-top" alt="">
             </a>
-            <div class="opciones">
-                <a class="opcion1" href="info.html">
-                    Acerca de nosotros
-                </a>
-                <a class="opcion2" href="contacto.html" >
-                    Contactanos
-                </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bx bx-menu"></i>
+
+            </button>
+
+            <div class="collapse navbar-collapse opciones" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link opcion1" href="info.html">Acerca de Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link opcion1" href="contacto.html">Contactanos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link opcion1 " href="publicaciones.html">Publicaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link opcion1 " href="perfil.html">
+                            <i class="bx bx-user-circle"></i>
+                        </a>
+                    </li>
+                </ul>
+
             </div>
         </nav>
     </header>
@@ -44,20 +62,20 @@
                     </div>
                     <h1 class="text-center">Registro</h1>
                     <br />
-                            <div class="form-group text-center">
-                            <p>Nombre</p>
-                            <label for="" class="sr-only">Nombre</label>
-                            <input id= "name" type= "text" class= "form-control" 
-                                autofocusid="validationCustom01" value="" required>
-                            <div class="valid-feedback">
-                                listo!
-                            </div>
+                    <div class="form-group text-center">
+                        <p>Nombre</p>
+                        <label for="" class="sr-only">Nombre</label>
+                        <input id="name" type="text" class="form-control" autofocusid="validationCustom01" value=""
+                            required>
+                        <div class="valid-feedback">
+                            listo!
+                        </div>
 
-                            <div class="form-group text-center">
+                        <div class="form-group text-center">
                             <p>Apellido</p>
                             <label for="" class="sr-only">correo</label>
-                            <input id= "apellido" type= "text" class= "form-control" 
-                                autofocusid="validationCustom01" value="" required>
+                            <input id="apellido" type="text" class="form-control" autofocusid="validationCustom01"
+                                value="" required>
                             <div class="valid-feedback">
                                 listo!
                             </div>
@@ -65,28 +83,29 @@
                             <div class="form-group text-center">
                                 <p>GamerTagg</p>
                                 <label for="" class="sr-only">correo</label>
-                                <input id= "GamerTagg" type= "text" class= "form-control" 
-                                    autofocusid="validationCustom01" value="" required>
+                                <input id="GamerTagg" type="text" class="form-control" autofocusid="validationCustom01"
+                                    value="" required>
                                 <div class="valid-feedback">
                                     listo!
-                            </div>
-                                
-                            <div class="form-group text-center">
-                                <p>Sexo</p>
-                                Femenino<input type="radio" name="Sexo" id="1">
-                                Masculino<input type="radio" name="Sexo" id="2">
-                                Otro <input type="radio" name="Sexo" id="3">
-                                <div class="valid-feedback">
-                                    listo!
-                            </div>
-                    </div>
-             
-                    <p>Fecha de Nacimiento </p><input type="date" class="redondeado" name="date" id="start" max="2003-12-31" min="1960-12-31">
-                    <br><br>
-                    <div>
-                        <button id="submit " class="btn btn-success">Login</button>
-                    </div>
-                    <br />
+                                </div>
+
+                                <div class="form-group text-center">
+                                    <p>Sexo</p>
+                                    Femenino<input type="radio" name="Sexo" id="1">
+                                    Masculino<input type="radio" name="Sexo" id="2">
+                                    Otro <input type="radio" name="Sexo" id="3">
+                                    <div class="valid-feedback">
+                                        listo!
+                                    </div>
+                                </div>
+
+                                <p>Fecha de Nacimiento </p><input type="date" class="redondeado" name="date" id="start"
+                                    max="2003-12-31" min="1960-12-31">
+                                <br><br>
+                                <div>
+                                    <button id="submit " class="btn btn-success">Login</button>
+                                </div>
+                                <br />
                 </form>
             </div>
         </div>
