@@ -17,20 +17,43 @@ p {
     justify-content: center;
 }
 .d-block{
-object-fit: contain;
+    object-fit: contain;
 }
-.col-4 .bx{
+
+/*contenedor social*/
+.social-media{
+    width: 100%;
     display: flex;
+    align-content: center;
     justify-content: center;
-    border: 1px solid rgba(46, 116, 148, 0.808);
-    border: radius 50%;
-    font-size: 20px;
-    cursor: pointer;
+    flex-wrap: wrap;
+     
 }
-.bx:hover{
-   
-    color: rgb(116, 224, 219);
-    border:1px solid blueviolet;
-    
+
+/* iconos social*/ 
+ .icono-social{
+    display: inline-block;
+    margin-left: 3%;
+    width: 52px;
+    height: 52px;
+    border-radius: 1px solid rgb(139, 37, 139);
+    border-radius: 50%;
+    text-align: center;
+    color:rgb(238, 245, 248);
+          
 }
+
+/*color de fondo*/
+.icono-social:hover{
+    background: #f1eff1;
+    color: rgb(50, 164, 240);
+
+}
+
+/*icono tamaño*/
+.icono-social  .bx{
+    font-size: 26px;
+    line-height: 60px;
+}
+
 
