@@ -36,6 +36,11 @@ p {
      
 }
 
+/* Haciendo los indicadores hacia abajo */
+.carousel{
+    padding-bottom: 300px;
+}
+
 /* iconos social*/ 
  .icono-social{
     display: inline-block;
@@ -69,4 +74,19 @@ p {
         background-color: #8486864a;
     }
 
+}
+
+@media (max-width: 768px) {
+    .informacion{
+        padding: 0 100px; 
+    }
+    
+}
+
+@media (max-width: 576px) {
+
+    .informacion{
+        padding: 0 50px;
+    }
+    
 }
