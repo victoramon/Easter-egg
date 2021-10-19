@@ -69,12 +69,6 @@ body{
     color:white;
 }
 
-.form__contacto button{
-    color:black;
-    background: #00FF19;
-justify-self: center;
-}
-
 .contacto__direccion{
     flex-direction: column;
     display:flex;
@@ -95,8 +89,6 @@ justify-self: center;
     justify-content: center;
     align-self: center;
 }
-
-
 
 .contacto__direccion {
     align-self: center;
