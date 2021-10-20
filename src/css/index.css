@@ -1,9 +1,8 @@
-
 body{
     background:linear-gradient(180deg, #202978 0%, #57CC99 100%); 
     min-block-size: 100vh; 
     padding-top:100px;
-    
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🥚</text></svg>"), auto;
 }
 body::-webkit-scrollbar {
     width: 7px;
@@ -16,6 +15,7 @@ body::-webkit-scrollbar-thumb {
 
 .navbar-brand {
     font-family: 'Gluten', cursive;
+    
 }
 
 .navbar {
@@ -24,6 +24,8 @@ body::-webkit-scrollbar-thumb {
     background-color: #202978;
     top: 0;
     z-index: 5;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🐣</text></svg>"), auto;
+
 }
 
 .logo {
@@ -42,6 +44,7 @@ body::-webkit-scrollbar-thumb {
 .navbar-light .navbar-nav .nav-link {
     color: rgba(0,0,0,.5);
     color: white;
+
 }
 
 .navbar .navbar-toggler .bx{
@@ -57,7 +60,8 @@ body::-webkit-scrollbar-thumb {
 .navbar .nav-item a:hover{
     color: rgba(255, 255, 255, 0.65)!important;
     text-shadow:1px 1px blue;
-    
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🥚</text></svg>"), auto;
+
 }
 
 .opcion1 {

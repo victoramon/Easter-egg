@@ -4,6 +4,7 @@
     overflow: hidden;
     margin:auto;
     padding: 60px 0;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🐣</text></svg>"), auto;
 }
 body{
     background-image: linear-gradient(rgb(0 0 0 / 48%), rgb(0 0 0 / 38%)), url(../img/fondoRegistro.jpeg);
@@ -11,7 +12,7 @@ body{
     background-size: cover;
     background-position: center;
     color: white;
-  }
+}
 .bxs-user{
     font-size: 70px;
 }
