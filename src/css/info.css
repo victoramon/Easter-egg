@@ -17,10 +17,16 @@ body {
 h5 {
     text-align: center;
     justify-content: center;
+    font-size: 25px;
+    font-family: 'sans-serif';
+    color: white;
 } 
 p {
-    text-align: center;
+    text-align: justify;
     justify-content: center;
+    font-size: 18px;
+    font-family: 'sans-serif';
+    color: white;
 }
 .d-block{
     object-fit: contain;

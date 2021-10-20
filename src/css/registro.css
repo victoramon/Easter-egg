@@ -19,6 +19,8 @@ body{
 .card {
     background-color: #a1b6f159;
     border-radius: 20px;
+    font-size: 18px;
+    font-family: 'sans-serif';
 }
 .letras {
     display: flex;

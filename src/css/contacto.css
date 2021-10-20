@@ -8,11 +8,21 @@ body{
     background-position: center;
 }
 
+.colum-texto{
+    font-size: 18px;
+    font-family: 'sans-serif';
+    color: whitesmoke;
+}
+
 .navbar {
     background-color: #20785a4a;
 }
 
-
+h1 { 
+    font-size: 25px;
+    font-family: 'sans-serif';
+    color: white;
+}
 .first__row{
     border-top: 1px solid white;
 }
@@ -81,6 +91,7 @@ body{
     display:flex;
     justify-content: center;
 }
+
 .contacto__direccion p{
     max-width: 80%;
     font-size: 20px;

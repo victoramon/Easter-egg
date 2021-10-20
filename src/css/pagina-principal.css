@@ -48,6 +48,11 @@ body{
 .img-arow{
     animation: movimiento 1s infinite linear;
 }
+.form-group{
+    font-size: 18px;
+    font-family: 'sans-serif';
+    color: black;
+}
 
 .form__register{
     background: rgba(87, 204, 153, 0.41);
@@ -76,13 +81,14 @@ justify-self: center;
     display: flex;
 }
 .formulario{
-    font-size: 20px;
     display: grid;
     gap:2rem;
 }
 
 .button--janus span {
     color: beige;
+    font-size: 18px;
+    font-family: 'sans-serif';
 }
 
 @media (max-width: 991px) {

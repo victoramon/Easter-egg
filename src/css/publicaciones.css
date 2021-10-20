@@ -12,14 +12,31 @@ body{
 }
  
  
-.bloque {
-    margin-top: 1rem;  
-}
+
  
 .card {
     margin-top: 1rem;
     cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🐣</text></svg>"), auto;
 
+}
+
+.card h3{
+  font-size: 25px;
+  font-family: 'sans-serif';
+  color: black;
+
+}
+
+.card p {
+  font-size: 18px;
+  font-family: 'sans-serif';
+  color: black;
+}
+
+h3 {
+  font-size: 40px;
+  font-family: 'sans-serif';
+  color: whitesmoke;
 }
 /*color al fondo de la pantalla cuando se abra la ventana emergente*/
 .overlay{
@@ -109,6 +126,7 @@ border-radius: 3px;
 }
 .carrousell{
     margin-top: 90%;
+    
   }
   
   /*Css del carrousel*/

@@ -28,10 +28,6 @@ body::-webkit-scrollbar-thumb {
 
 }
 
-.logo {
-    color: white;
-    font-size: 120%; 
-}
 .alinear {
     display: flex;
     align-items: center;

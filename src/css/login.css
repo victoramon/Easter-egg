@@ -22,12 +22,26 @@ body{
     backdrop-filter: blur(6px);
 }
 
+#formulario h1{
+    font-family: 'sans-serif';
+    color: black;
+}
+
+#formulario p{
+    font-size: 18px;
+    font-family: 'sans-serif';
+    color: black;
+}
+
 #formulario a{
+    color: black;
+    font-size: 18px;
+    font-family: 'sans-serif';
     color: black;
 }
 
 .bxs-user{
-    font-size: 70px;
+    font-size: 150px;
 }
 .card {
     background-color: #a1b6f159;
