@@ -1,5 +1,8 @@
 h2{
     font-size: 34px;
+}
+p , h2, h5 ,.lista-info{
+  font-family: 'Philosopher', sans-serif;
 }/*
 .lista-info{
   font-size: 30px;
@@ -7,7 +10,7 @@ h2{
 */
 /* Fondo de pagina */
 body{
-  background-image: linear-gradient(rgb(0 0 0 / 48%), rgb(0 0 0 / 38%)), url(../img/fondoPerfil.jpg);
+  background-image: linear-gradient(rgb(0 0 0 / 48%), rgb(0 0 0 / 38%)), url(https://c.tenor.com/u0QmOtJMpC4AAAAC/colors-flashing.gif);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -69,14 +72,10 @@ body{
 @media screen and (min-width: 800px) {
   .dos-columnas{
   width: 100%;
-  
-  
   }
 }
 @media (min-width: 991px) {
-    
   .navbar {
       background-color: #20785a4a;
   }
-
 }
