@@ -1,7 +1,7 @@
 body{
     
     background-image: linear-gradient(
-1deg, #20297840 0%, #57cc994d 100%), url('https://media3.giphy.com/media/YnlDGfCxyOIYTDp86I/200.gif');
+1deg, #20297840 0%, #57cc994d 100%), url('../img/fondoContacto.jpg');
    color: white;
    background-size: cover;
     background-repeat: no-repeat;

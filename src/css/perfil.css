@@ -10,7 +10,7 @@ p , h2, h5 ,.lista-info{
 */
 /* Fondo de pagina */
 body{
-  background-image: linear-gradient(rgb(0 0 0 / 48%), rgb(0 0 0 / 38%)), url(https://c.tenor.com/9e_cIQ9sM0YAAAAC/super-mario-allstars-nintendo.gif);
+  background-image: linear-gradient(rgb(0 0 0 / 48%), rgb(0 0 0 / 38%)), url('../img/fondoPerfil.jpg');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
