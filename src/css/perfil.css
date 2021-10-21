@@ -1,13 +1,16 @@
 h2{
     font-size: 34px;
 }
+p , h2, h5 ,.lista-info{
+  font-family: 'Philosopher', sans-serif;
+}/*
 .lista-info{
-    font-size: 30px;
+  font-size: 30px;
 }
-
+*/
 /* Fondo de pagina */
 body{
-  background-image: linear-gradient(rgb(0 0 0 / 48%), rgb(0 0 0 / 38%)), url(../img/fondoPerfil.jpg);
+  background-image: linear-gradient(rgb(0 0 0 / 48%), rgb(0 0 0 / 38%)), url(https://c.tenor.com/9e_cIQ9sM0YAAAAC/super-mario-allstars-nintendo.gif);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -37,8 +40,9 @@ body{
   display: flex;
   justify-content: center;
 }
-.botones img{
+.tres-columnas img{
   width: 100%;
+  margin: 0 auto;
 }
 .tres-columnas{
   width: 90%;
@@ -47,4 +51,31 @@ body{
 .columna1{
   text-align: center;
   color: white;
+  width: 100%;
+  font-size: 19px;
+  box-sizing:border-box;
+}
+
+/*
+@media screen and (min-width: 800px) {
+  .columna1{
+  width: 100%;
+  float: left;
+  }
+  .feed-publicaciones{
+    width: 100%;
+    float: left;
+  }
+  */
+  
+}
+@media screen and (min-width: 800px) {
+  .dos-columnas{
+  width: 100%;
+  }
+}
+@media (min-width: 991px) {
+  .navbar {
+      background-color: #20785a4a;
+  }
 }
