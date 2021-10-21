@@ -67,8 +67,7 @@ body{
     float: left;
   }
   */
-  
-}
+
 @media screen and (min-width: 800px) {
   .dos-columnas{
   width: 100%;
