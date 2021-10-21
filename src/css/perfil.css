@@ -1,5 +1,6 @@
 h2{
     font-size: 34px;
+<<<<<<< HEAD
     font-family: 'sans-serif';
 }
 
@@ -18,6 +19,12 @@ h2{
 
 
 
+=======
+}
+p , h2, h5 ,.lista-info{
+  font-family: 'Philosopher', sans-serif;
+}/*
+>>>>>>> 1130957324fc75f046e8e4cfe71b156272a267aa
 .lista-info{
     font-size: 30px;
     font-size: 18px;
@@ -27,7 +34,7 @@ h2{
 
 /* Fondo de pagina */
 body{
-  background-image: linear-gradient(rgb(0 0 0 / 48%), rgb(0 0 0 / 38%)), url(../img/fondoPerfil.jpg);
+  background-image: linear-gradient(rgb(0 0 0 / 48%), rgb(0 0 0 / 38%)), url(https://c.tenor.com/u0QmOtJMpC4AAAAC/colors-flashing.gif);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -67,4 +74,34 @@ body{
 .columna1{
   text-align: center;
   color: white;
+<<<<<<< HEAD
+=======
+  width: 100%;
+  font-size: 19px;
+  box-sizing:border-box;
+}
+
+/*
+@media screen and (min-width: 800px) {
+  .columna1{
+  width: 100%;
+  float: left;
+  }
+  .feed-publicaciones{
+    width: 100%;
+    float: left;
+  }
+  */
+  
+}
+@media screen and (min-width: 800px) {
+  .dos-columnas{
+  width: 100%;
+  }
+}
+@media (min-width: 991px) {
+  .navbar {
+      background-color: #20785a4a;
+  }
+>>>>>>> 1130957324fc75f046e8e4cfe71b156272a267aa
 }

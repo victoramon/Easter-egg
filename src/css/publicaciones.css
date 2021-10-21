@@ -1,11 +1,13 @@
 body{
-    background-image: url('../img/906751.jpg');
+    background-image: url('https://i.pinimg.com/originals/2d/89/1c/2d891c7276f5fc30bc37867fbe03aa4a.gif');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
     cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🥚</text></svg>"), auto;
   }
-
+  p , h2, h5 ,.lista-info{
+    font-family: 'Philosopher', sans-serif;
+  }
 
 .color {
     background-color: #22577a82;

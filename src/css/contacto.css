@@ -1,12 +1,13 @@
 body{
     
     background-image: linear-gradient(
-1deg, #20297840 0%, #57cc994d 100%), url('../img/fondoContacto.jpg');
+1deg, #20297840 0%, #57cc994d 100%), url('https://media3.giphy.com/media/YnlDGfCxyOIYTDp86I/200.gif');
    color: white;
    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
+<<<<<<< HEAD
 
 .colum-texto{
     font-size: 18px;
@@ -14,6 +15,11 @@ body{
     color: whitesmoke;
 }
 
+=======
+.container{
+    font-family: 'Philosopher', sans-serif;   
+}
+>>>>>>> 1130957324fc75f046e8e4cfe71b156272a267aa
 .navbar {
     background-color: #20785a4a;
 }
