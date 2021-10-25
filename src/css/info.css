@@ -1,7 +1,4 @@
 body {
-    background-image: linear-gradient(
-180deg, #00000070, #0000007a), url('../img/fondoInfo.jpg');
-
     background-position: center;
     background-size: cover;
     color: white;    
