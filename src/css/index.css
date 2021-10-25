@@ -1,5 +1,5 @@
 body{
-    background:linear-gradient(180deg, #202978 0%, #57CC99 100%); 
+    background: url('../img/fondo.jpeg'); 
     min-block-size: 100vh; 
     padding-top:100px;    
     font-family: 'Philosopher', sans-serif;
