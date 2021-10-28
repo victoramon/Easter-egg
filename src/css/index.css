@@ -18,7 +18,9 @@ body::-webkit-scrollbar-thumb {
     font-family: 'Gluten', cursive;
     
 }
-
+.formulario{
+    color: white;
+}
 
 .navbar {
     position: fixed;
