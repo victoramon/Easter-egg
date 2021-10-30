@@ -1,7 +1,7 @@
-var btnpublicar = document.getElementById('btnpublicar');
-var overlay = documente.getElementById('overlay');
-var popup = document.getElementById('pop-up');
-var botoncerrarpopup = document.getElementById('boton-cerrar-pop-up');
+var btnpublicar = document.getElementById('btnpublicar'),
+    overlay = document.getElementById('overlay'),
+    popup = document.getElementById('pop-up'),
+    botoncerrarpopup = document.getElementById('boton-cerrar-pop-up');
 
 /**evento boton publicar */
 btnpublicar.addEventListener('click', function(){
