@@ -54,13 +54,180 @@ body{
   font-size: 19px;
   box-sizing:border-box;
 }
+
+/*color al fondo de la pantalla cuando se abra la ventana emergente*/
+.overlay{
+  background: rgba(153, 224, 250, 0.466);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+
+}
+/*para ser visible la ventana emergente*/
+.overlay.active{
+  visibility: visible;
+ 
+  
+}
+/*style a la ventna emergente y elementos que lo contiene*/
+.pop-up{
+  background: rgba(248, 249, 252, 0.801);
+  box-shadow: 0px 0px 10px 0px rgba(250, 249, 252, 0.959);
+  border-radius:5px;
+  padding:18px;
+  text-align: center;
+  width: 300px;
+  opacity:0 ;
+  transition: .1s ease all;
+  transform: scale(0.7);
+
+}
+.pop-up .boton-cerrar-pop-up{
+  font-size: 16px;
+  line-height: 16px;
+  display:block;
+  text-align: right;
+  color: rgb(27, 81, 117);
+  transition: 3s ease all;
+
+}
+.pop-up .boton-cerrar-pop-up:hover{
+  color: cyan;
+  font-size: 20px;
+}
+
+.text-public {
+font-size: 25px; 
+margin-bottom: 10px; 
+color: blue;
+opacity: 0;
+}
+
+.pop-up form .contenedor-texto textarea{
+width: 100%;
+margin-bottom: 20px;
+height: 130px;
+line-height: 50px;
+text-align: center;
+border:1px solid rgba(0, 0, 255, 0.438);
+border-radius: 3px;
+opacity: 0;
+}
+
+.pop-up form .submit {
+  padding: 0 10px;
+  height: 40px;
+  border: none;
+  line-height: 40px;
+  color: rgb(237, 236, 243);
+  background-color: rgba(22, 185, 22, 0.87);
+  font-size: 15px;
+  border: radius 3px;
+  cursor: pointer;
+  transition: .3s  ease all;
+  opacity: 0;
+
+}
+.pop-up form .submit:hover{
+  background: rgb(24, 27, 219, .9);
+}
+/*animaciones del pop-up*/
+.pop-up.active{
+opacity: 1;
+transform: scale(1);
+
+}
+.pop-up.active  .text-public {
+animation: entrada .8s ease .3s forwards;
+
+}
+.pop-up.active .contenedor-texto textarea{
+animation: txt 1s ease 1s forwards;
+}
+
+.pop-up.active .submit{
+animation: submit 1s ease 1s forwards;
+}
+@keyframes entrada{
+from{
+  transform: translateY(-20px);
+  opacity: 0;
+}
+to{
+  transform: translateY(0);
+  opacity: 1;
+}
+}
+@keyframes txt {
+
+from{
+  opacity: 0;
+}
+to{
+opacity: 1;
+}
+}
+@keyframes submit {
+
+from{
+  opacity: 0;
+}
+to{
+opacity: 1;
+}
+}
+/*--------------------*/
+.pop-btn{
+  padding: 0 10px;
+  height: 40px;
+  border: none;
+  color: rgb(237, 236, 243);
+  background-color: rgba(25, 156, 218, 0.87);
+  font-size: 15px;
+  border: radius 3px;
+  cursor: pointer;
+  text-decoration:none;
+  
+}
 /*publicar*/
 .btnpublicar{
-  position: absolute;
-  top: 35px;
-  left: 250px;
-  transform: translate(-50%,-50%);
+  position: fixed;
+  right: 8px;
+  line-height: 49px;
+  bottom:30px;
 }
+
+.msm {
+    
+  display: inline-block;
+  margin-left: 3%;
+  width: 50px;
+  height: 50px;
+  border-radius: 1px solid rgb(139, 37, 139);
+  border-radius: 50%;
+  text-align: center;
+  text-decoration:none;
+  color:rgb(245, 249, 250);
+  box-shadow: 0px 0px 10px 0px rgba(250, 249, 252, 0.959);
+       
+}
+.msm:hover{
+color: #0d09f7;
+background: rgba(248, 248, 248, 0.658);
+
+}
+.btnpublicar .msm:hover::before{
+ margin-top: -44px;
+}
+/*-------------------*/
+
+/*
 .btnpublicar .msm .bx{
   width: 50px;
   height: 35px;
@@ -70,11 +237,11 @@ body{
   text-align: right;
   text-decoration:none;
   font-size: 25px;
-  /*padding: 3px 10px;*/
+  /*padding: 3px 10px;
   border: rgb(60, 139, 243) 3px solid;
   border-radius: 10px;
   box-shadow: 0px 0px 10px 0px rgba(250, 249, 252, 0.959);
- /* overflow:hidden; */
+ /* overflow:hidden; 
 }
 /*
 .btnpublicar  .msm:hover::before{
@@ -88,8 +255,9 @@ body{
 
 @media (max-width: 991px) {
     
-  .btnpublicar .msm .bx {
+  .btnpublicar .msm  {
       color: rgb(133, 16, 148);
+      
   }
 
 
@@ -97,6 +265,7 @@ body{
 @media (max-width: 768px) {
     .btnpublicar{
         padding: 0 100px; 
+        bottom: 20px;
     }
     .pop-up{
       padding: 0 100px; 

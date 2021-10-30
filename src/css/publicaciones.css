@@ -37,10 +37,10 @@ body{
 
 }
 /*para ser visible la ventana emergente*/
-/*.overlay.active{*/
-   /* visibility: visible;
-   /*  z-index: 100; */
-/*}*/
+.overlay.active{
+   visibility: visible;
+  
+}
 /*style a la ventna emergente y elementos que lo contiene*/
 .pop-up{
     background: rgba(248, 249, 252, 0.801);
@@ -49,7 +49,9 @@ body{
     padding:18px;
     text-align: center;
     width: 300px;
-
+    opacity:0 ;
+    transition: .1s ease all;
+    transform: scale(0.7);
 }
 .pop-up .boton-cerrar-pop-up{
     font-size: 16px;
@@ -57,7 +59,7 @@ body{
     display:block;
     text-align: right;
     color: rgb(27, 81, 117);
-    transition: 3px ease all;
+    transition: 3s ease all;
 
 }
 .pop-up .boton-cerrar-pop-up:hover{
@@ -68,7 +70,7 @@ body{
  font-size: 25px; 
  margin-bottom: 10px;  
  color: blue;
- /*opacity: 0px;*/
+ opacity: 0px;
 }
 .pop-up form .contenedor-texto textarea{
 width: 100%;
@@ -78,6 +80,7 @@ line-height: 50px;
 text-align: center;
 border:1px solid rgba(0, 0, 255, 0.438);
 border-radius: 3px;
+opacity: 0;
 }
 
 .pop-up form .submit {
@@ -90,10 +93,57 @@ border-radius: 3px;
     border: radius 3px;
     cursor: pointer;
     transition: .3s  ease all;
+    opacity: 0;
 }
 .pop-up form .submit:hover{
     background: rgb(24, 27, 219, .9);
 }
+/*animaciones del pop-up*/
+.pop-up.active{
+  opacity: 1;
+  transform: scale(1);
+  
+}
+.pop-up.active  .text-public {
+  animation: entrada .8s ease .3s forwards;
+  
+}
+.pop-up.active .contenedor-texto textarea{
+  animation: txt 1s ease 1s forwards;
+}
+
+.pop-up.active .submit{
+  animation: submit 1s ease 1s forwards;
+}
+@keyframes entrada{
+  from{
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes txt {
+  
+  from{
+    opacity: 0;
+}
+to{
+  opacity: 1;
+}
+}
+@keyframes submit {
+  
+  from{
+    opacity: 0;
+}
+to{
+  opacity: 1;
+}
+}
+/*-----boton popup----*/
 .pop-btn{
     padding: 0 10px;
     height: 40px;
@@ -104,6 +154,39 @@ border-radius: 3px;
     border: radius 3px;
     cursor: pointer;
 }
+
+  /*----boton publicar---*/
+
+  .btnpublicar{
+    position: fixed;
+    right: 8px;
+    line-height: 49px;
+    bottom:30px;
+
+  }
+  .msm {
+    
+    display: inline-block;
+    margin-left: 3%;
+    width: 50px;
+    height: 50px;
+    border-radius: 1px solid rgb(139, 37, 139);
+    border-radius: 50%;
+    text-align: center;
+    text-decoration:none;
+    color:rgb(245, 249, 250);
+    box-shadow: 0px 0px 10px 0px rgba(250, 249, 252, 0.959);
+         
+}
+.msm:hover{
+  color: #0d09f7;
+  background: rgba(248, 248, 248, 0.658);
+  
+ }
+ .btnpublicar .msm:hover::before{
+   margin-top: -44px;
+ }
+/*-------------------*/
 .img-container img{
     margin: 10px auto;
     width: auto;
@@ -117,14 +200,7 @@ border-radius: 3px;
     box-sizing: border-box;
   }
   
-  /*.wrapper {
-    background: linear-gradient(60deg, #420285, #08BDBD);
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }*/
-  
+
   .carousel {
     /* position: fixed; */
     width: 100%;
@@ -259,7 +335,7 @@ border-radius: 3px;
   margin: 0 auto;
 }
 
-  /*publicar*/
+  /*publicar
   .btnpublicar{
     position: absolute;
     top: 35px;
@@ -275,11 +351,11 @@ border-radius: 3px;
     text-align: right;
     text-decoration:none;
     font-size: 25px;
-    /*padding: 3px 10px;*/
+    /*padding: 3px 10px;
     border: rgb(60, 139, 243) 3px solid;
     border-radius: 10px;
     box-shadow: 0px 0px 10px 0px rgba(250, 249, 252, 0.959);
-   /* overflow:hidden; */
+   /* overflow:hidden; 
   }
   /*
   .btnpublicar  .msm:hover::before{
@@ -293,8 +369,9 @@ border-radius: 3px;
   
   @media (max-width: 991px) {
       
-    .btnpublicar .msm .bx {
+    .btnpublicar .msm  {
         color: rgb(133, 16, 148);
+        
     }
   
   
@@ -302,12 +379,14 @@ border-radius: 3px;
   @media (max-width: 768px) {
       .btnpublicar{
           padding: 0 100px; 
+          bottom:20px;
       }
+    
       .pop-up{
         padding: 0 100px; 
       }
-      
-  }
+  }  
+  
   
   @media (max-width: 576px) {
   
