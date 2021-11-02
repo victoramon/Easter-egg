@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 body{
     background: url('../img/fondo.jpeg'); 
     min-block-size: 100vh; 
@@ -25,7 +28,7 @@ body::-webkit-scrollbar-thumb {
 .navbar {
     position: fixed;
     width: 100%;
-    background-color: #202978;
+    background-color: transparent;
     top: 0;
     z-index: 5;
     cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🐣</text></svg>"), auto;
@@ -58,14 +61,76 @@ body::-webkit-scrollbar-thumb {
     font-size: 25px;
 }
 
-.navbar .nav-item a:hover{
-    color: rgba(255, 255, 255, 0.65)!important;
+.navbar .nav-item a{
+   width:100%;
+}
+
+.navbar .nav-item:hover a{
+    color: #00ffe7!important;
     text-shadow:1px 1px blue;
-    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🥚</text></svg>"), auto;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👉</text></svg>"), auto;
 
 }
 
 .opcion1 {
-    margin-right: 20px;
+    /* margin-right: 20px; */
     color: white;
+}
+
+li.nav-item {
+    border: 1px solid white;
+    margin-inline-end: 16px;
+    display: flex;
+    align-items: center;
+    transition: 250ms transform ease;
+    border-radius: 1rem 0.1rem;
+    backdrop-filter: blur(10px);
+}
+
+li.nav-item:hover {
+    animation: animacionBorder 1s infinite linear;
+    transform: scale(1.1); 
+    border-width: 2px;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👉</text></svg>"), auto;
+}
+
+
+@media (max-width: 991px) {
+
+    li.nav-item {
+        text-align: center;
+    }
+
+    li.nav-item:hover {
+        transform: scale(1); 
+      }
+
+
+}
+
+
+
+@keyframes animacionBorder{
+    0%{ 
+    border-top-color:  #43cb5e;
+    border-right-color: #7139e5;
+
+    }
+    25%{
+    border-right-color: #43cb5e;
+    border-bottom-color: #7139e5;
+    }
+    50%{
+    border-bottom-color: #43cb5e;
+    border-left-color:#7139e5;
+    }
+    75%{
+    border-left-color: #43cb5e;
+    border-top-color:#7139e5;
+    }
+    100%{ 
+    border-top-color:  #43cb5e;
+    border-right-color: #7139e5;
+
+    }
 }
