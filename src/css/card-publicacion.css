@@ -1,0 +1,32 @@
+/* Estilizacion de tarjetas de publicaciones*/
+.card {
+  border-radius: 16px;
+  background-color: #1d89de !important;
+  color: white !important;
+  margin-top: 1rem;
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🐣</text></svg>"),
+    auto;
+}
+
+.btn {
+  border-radius: 0.5rem;
+  transition: 250ms transform ease;
+  color: white !important;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.like {
+  background-color: #065ea7;
+}
+
+.share {
+  background-color: #597546;
+}
+
+.add-coment {
+  background-color: #79b6e2;
+  margin-block-start: 16px;
+}

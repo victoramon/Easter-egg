@@ -7,21 +7,12 @@ body{
   p , h2, h5 ,.lista-info{
     font-family: 'Philosopher', sans-serif;
   }
-
-.color {
-    background-color: #22577a82;
-}
  
  
 .bloque {
     margin-top: 1rem;  
 }
  
-.card {
-    margin-top: 1rem;
-    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🐣</text></svg>"), auto;
-
-}
 /*color al fondo de la pantalla cuando se abra la ventana emergente*/
 .overlay{
     background: rgba(153, 224, 250, 0.466);
