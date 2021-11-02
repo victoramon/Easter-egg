@@ -17,6 +17,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="./src/css/boton.css">
     <link href="https://fonts.googleapis.com/css2?family=Gluten:wght@700&display=swap" rel="stylesheet">
+    <!-- CSS SWEET ALERT -->
+    <link rel="stylesheet" href="./node_modules/sweetalert2/dist/sweetalert2.css">
+
     <title>Pagina Principal</title>
 </head>
 
@@ -94,21 +97,21 @@
             </div>
 
             <!--formulario-->
-            <div class="col formulario">
-                <form class="form__register mt-1">
-                    <div class="form-group">
+            <div class="col formulario" id="formulario_login">
+                <form class="form__register mt-1" method="post" >
+                    <div class="form-group" id="recuadro_correo">
                         <label for="InputEmail1">Correo Electrónico</label>
-                        <input type="email" class="form-control" id="InputEmail1"  required  aria-describedby="emailHelp">
+                        <input type="email" class="form-control input_email" id="InputEmail1" name="correo" >
+                        <p class="formulario_input_error">Escribe un correo valido example@example.example</p>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" id="recuadro_password">
                         <label for="InputPassword1">Contraseña</label>
-                        <input type="password" class="form-control" id="InputPassword1">
+                        <input type="password" class="form-control input_password" id="InputPassword1" name="password">
+                        <p class="formulario_input_error">La contraseña debe tener entre 4 y 16 caracteres</p>
                     </div>
-                    <a href="publicaciones.html">
-                        <button type="button" class="form__register--btn button button--janus">
+                        <button  id="btn_log_in"  type="submit" class="form__register--btn button button--janus">
                             <span>Login</span>
                         </button>
-                    </a>
                 </form>
                 <a href="registro.html">
                         <button type="button" class="form__register--btn button button--janus">
@@ -121,6 +124,43 @@
 
         </div>
     </div>
+
+    <!-- Para Sweet Alert -->    
+    <script src="src/js/peginaprincipal.js">
+        /* import Swal from './node_modules/sweetalert2/src/sweetalert2.js'
+        console.log("Conectado");
+        const $btn_log_in=document.querySelector("#btn_log_in");
+        const $get_email = document.getElementById("#get_email");
+        console.log($get_email);
+        const $get_email = document.getElementById("#get_email");
+        const $get_password = document.getElementById("#get_password");
+        const $redireccionalogin = document.querySelector("#redireccionalogin");
+
+        $btn_log_in.addEventListener("click",()=>{
+            
+            if($get_email==null || $get_password==null){
+                $redireccionalogin.href = "index.html";
+                alert("Revisa que todos los campos esten bien");
+                console.log("Entra al primer if");
+            } */
+
+
+            //if($get_email==null || $get_password==null){
+                /*Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong!',
+                footer: '<a href="">Why do I have this issue?</a>'
+                })*/
+                /* $redireccionalogin.href = "perfil.html";
+                alert("Revisa que todos los campos esten bien");
+                console.log("Entra al primer if"); */
+            /* }else if($get_email!=null && $get_password!=null){
+                $redireccionalogin.href = "publicaciones.html";
+                console.log("Entra añ segundo");
+            } */
+        //});
+    </script> 
 
 
 

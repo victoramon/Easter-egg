@@ -142,3 +142,29 @@ justify-self: center;
         transform: translateX(0);
     }
 }
+
+.recuadro_correo-correcto{
+    color: #00FF19;
+}
+
+.recuadro_correo-incorrecto{
+    color: red;
+    /*minuto 25*/
+}
+
+.recuadro_password-correcto{
+    color: #00FF19;
+}
+
+.recuadro_password-incorrecto{
+    color: red;
+    /*minuto 25*/
+}
+
+.formulario_input_error{
+    display: none;
+}
+
+.formulario_input_error_activo{
+    display: block;
+}
