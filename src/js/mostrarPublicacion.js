@@ -16,7 +16,7 @@ export function mostrarPublicacion(datosPublicacion){
     <div class="card-footer">
         <div id="comentarios"></div>
             <small class="">Comentarios</small>
-            <div class="form-group form__message">
+            <div class="form__message">
 			    <label for="textMessage">Ingresa tu comentario</label>
 			    <textarea class="form-control" id="textMessage"
 			    rows="3"></textarea>
