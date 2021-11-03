@@ -114,7 +114,7 @@
                         </button>
                 </form> -->
             <div class="col formulario" id="formulario_login">
-                <form class="text-center form__contacto" ><br><br><br>
+                <form class="text-center form__contacto" method="POST"><br><br><br>
 					<div class="form-group" id="recuadro_correo">
 						<label for="InputEmail1"></label>
 						<input type="email" placeholder="Correo" class="form-control text-center input_email" id="InputEmail" name="correo" />
@@ -126,11 +126,15 @@
 						<input type="password" placeholder="Contraseña" class="form-control text-center input_password" id="InputPassword1" name="password" />
                         <p class="formulario_input_error">La contraseña debe tener entre 4 y 16 caracteres</p>
                     </div>
+                    <p class="passwordRecovery-link"><a href="#passwordRecovery__container">
+                        ¿Olvidó su contraseña?
+                    </a></p>
                     <a href="publicaciones.html">
                         <button id="btn_log_in" type="submit" class="form__register--btn button button--janus">
                             <span>Login</span>
                         </button>
                     </a>
+
 				</form>
                 <a href="registro.html">
                         <button type="button" class="form__register--btn button button--janus">
@@ -141,41 +145,22 @@
         </div>
     </div>
 
+    <!-- Formato para recuperar el correo -->
+    <div class="passwordRecovery__container" id="passwordRecovery__container">
+        <div class="passwordRecovery">
+        <a class="passwordRecovery--close" href="#"><i class="bx bxs-x-square"></i></a>
+            <form action="" class="passwordRecovery__form">
+                <h3>Recuperar contraseña</h3>
+                <p>Ingresa el correo electronico asociado a la cuenta, te enviaremos las intrucciones para restablecer la contraseña.</p>
+                <label for="recovery">Correo Electronico</label>
+                <input type="email" id="recovery" name="recovery" placeholder="Correo Electronico"/>
+                <button type="submit"><span>Enviar</span></button>
+            </form>
+        </div>
+
     <!-- Para Sweet Alert -->    
-    <script src="src/js/peginaprincipal.js">
-        /* import Swal from './node_modules/sweetalert2/src/sweetalert2.js'
-        console.log("Conectado");
-        const $btn_log_in=document.querySelector("#btn_log_in");
-        const $get_email = document.getElementById("#get_email");
-        console.log($get_email);
-        const $get_email = document.getElementById("#get_email");
-        const $get_password = document.getElementById("#get_password");
-        const $redireccionalogin = document.querySelector("#redireccionalogin");
-
-        $btn_log_in.addEventListener("click",()=>{
-            
-            if($get_email==null || $get_password==null){
-                $redireccionalogin.href = "index.html";
-                alert("Revisa que todos los campos esten bien");
-                console.log("Entra al primer if");
-            } */
-
-
-            //if($get_email==null || $get_password==null){
-                /*Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Something went wrong!',
-                footer: '<a href="">Why do I have this issue?</a>'
-                })*/
-                /* $redireccionalogin.href = "perfil.html";
-                alert("Revisa que todos los campos esten bien");
-                console.log("Entra al primer if"); */
-            /* }else if($get_email!=null && $get_password!=null){
-                $redireccionalogin.href = "publicaciones.html";
-                console.log("Entra añ segundo");
-            } */
-        //});
+    <script type="module" src="src/js/peginaprincipal.js">
+        
     </script> 
 
 
