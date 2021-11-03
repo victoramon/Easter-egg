@@ -219,3 +219,8 @@ li.nav-item:hover {
 .contacto__direccion {
     align-self: center;
 }
+
+.formulario{
+        display: flex;
+        align-items: center;    
+}
