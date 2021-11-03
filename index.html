@@ -97,8 +97,7 @@
             </div>
 
             <!--formulario-->
-<<<<<<< HEAD
-            <div class="col formulario" id="formulario_login">
+            <!-- 
                 <form class="form__register mt-1" method="post" >
                     <div class="form-group" id="recuadro_correo">
                         <label for="InputEmail1">Correo Electrónico</label>
@@ -113,26 +112,26 @@
                         <button  id="btn_log_in"  type="submit" class="form__register--btn button button--janus">
                             <span>Login</span>
                         </button>
-                </form>
-=======
-            <div class="col formulario">
-                <form class="text-center form__contacto"><br><br><br>
-					<div class="form-group">
-						<label for="InputName">Correo</label>
-						<input type="name" placeholder="CORREO" class="form-control text-center" id="InputName" />
-					</div>
-					<div class="form-group">
-						<label for="exampleInputEmail1">Contraseña</label>
-						<input type="password" placeholder="CONTRASEÑA" class="form-control text-center"
-							id="exampleInputEmail1" />
-					</div>
+                </form> -->
+            <div class="col formulario" id="formulario_login">
+                <form class="text-center form__contacto" ><br><br><br>
+					<div class="form-group" id="recuadro_correo">
+						<label for="InputEmail1">Correo</label>
+						<input type="email" placeholder="CORREO" class="form-control text-center input_email" id="InputEmail" name="correo" />
+                        <p class="formulario_input_error">Escribe un correo valido example@example.example</p>    
+                    </div>
+                    
+					<div class="form-group" id="recuadro_password">
+						<label for="InputPassword1">Contraseña</label>
+						<input type="password" placeholder="CONTRASEÑA" class="form-control text-center input_password" id="InputPassword1" name="password" />
+                        <p class="formulario_input_error">La contraseña debe tener entre 4 y 16 caracteres</p>
+                    </div>
                     <a href="publicaciones.html">
-                        <button type="button" class="form__register--btn button button--janus">
+                        <button id="btn_log_in" type="submit" class="form__register--btn button button--janus">
                             <span>Login</span>
                         </button>
                     </a>
 				</form>
->>>>>>> 41af1f3a1392fc20eca540de1053bcf54c6a683c
                 <a href="registro.html">
                         <button type="button" class="form__register--btn button button--janus">
                             <span>Registro</span>

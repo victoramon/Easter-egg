@@ -45,7 +45,7 @@ $inputs.forEach(($inputs) => {//Se agrega un evento a cada uno de los inputs del
 
 $formulario_login.addEventListener("submit", (e)=>{
     //e.preventDefault();
-    var $redirecciona_log_in = document.getElementById("btn_log_in");
+    //var $redirecciona_log_in = document.getElementById("btn_log_in");
     if(llenado_campos.correo && llenado_campos.password){
         console.log("Fomulario completo")
         //DEBE DE REDIRECCIONAR CUANDO SEA VERDADERA
