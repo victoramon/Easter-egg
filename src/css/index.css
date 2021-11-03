@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 body{
     background: url('../img/fondo.jpeg'); 
     min-block-size: 100vh; 
@@ -25,7 +28,7 @@ body::-webkit-scrollbar-thumb {
 .navbar {
     position: fixed;
     width: 100%;
-    background-color: #202978;
+    background-color: transparent;
     top: 0;
     z-index: 5;
     cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🐣</text></svg>"), auto;
@@ -58,14 +61,161 @@ body::-webkit-scrollbar-thumb {
     font-size: 25px;
 }
 
-.navbar .nav-item a:hover{
-    color: rgba(255, 255, 255, 0.65)!important;
+.navbar .nav-item a{
+   width:100%;
+}
+
+.navbar .nav-item:hover a{
+    color: #00ffe7!important;
     text-shadow:1px 1px blue;
-    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🥚</text></svg>"), auto;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👉</text></svg>"), auto;
 
 }
 
 .opcion1 {
-    margin-right: 20px;
+    /* margin-right: 20px; */
     color: white;
+}
+
+li.nav-item {
+    border: 1px solid white;
+    margin-inline-end: 16px;
+    display: flex;
+    align-items: center;
+    transition: 250ms transform ease;
+    border-radius: 1rem 0.1rem;
+    backdrop-filter: blur(10px);
+}
+
+li.nav-item:hover {
+    animation: animacionBorder 1s infinite linear;
+    transform: scale(1.1); 
+    border-width: 2px;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👉</text></svg>"), auto;
+}
+
+
+@media (max-width: 991px) {
+
+    li.nav-item {
+        text-align: center;
+    }
+
+    li.nav-item:hover {
+        transform: scale(1); 
+      }
+
+
+}
+
+
+
+@keyframes animacionBorder{
+    0%{ 
+    border-top-color:  #43cb5e;
+    border-right-color: #7139e5;
+
+    }
+    25%{
+    border-right-color: #43cb5e;
+    border-bottom-color: #7139e5;
+    }
+    50%{
+    border-bottom-color: #43cb5e;
+    border-left-color:#7139e5;
+    }
+    75%{
+    border-left-color: #43cb5e;
+    border-top-color:#7139e5;
+    }
+    100%{ 
+    border-top-color:  #43cb5e;
+    border-right-color: #7139e5;
+
+    }
+}
+
+.container{
+    font-family: 'Philosopher', sans-serif;   
+}
+
+.first__row{
+    border-top: 1px solid white;
+}
+
+.form-group {
+    background: rgba(0, 239, 254, 0.25);
+    color:white;
+    border:0;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr;
+    justify-content: start;
+    border-radius: 10px;
+}
+
+.form-group label{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    color:transparent;
+    transition: 450ms all ease;
+}
+
+.form__contacto input, .form__contacto textarea {
+    color: white;
+    background: transparent;
+    border:0;
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    margin: 10px 0;
+}
+
+.form__message{
+    border-radius: 0 0 50% 50%;
+}
+
+.form__contacto textarea{
+    border-radius: 0 0 50% 50%;
+    padding-top: 1rem;
+}
+
+.form-group:hover label  , .form__contacto textarea:hover ~ label  {
+    color: white;
+} 
+
+.form__contacto input:focus, .form__contacto textarea:focus {
+    background: transparent;
+    color:white;
+    border: 0;
+    box-shadow: none;
+
+}
+
+.form__contacto input::placeholder, .form__contacto textarea::placeholder{
+    color:white;
+}
+
+.contacto__direccion{
+    flex-direction: column;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    border-left: 1px solid white;
+}
+
+.parrafo__contacto{
+    display:flex;
+    justify-content: center;
+}
+.contacto__direccion p{
+    max-width: 80%;
+    font-size: 20px;
+    text-align: center;
+    align-items:center;
+    justify-content: center;
+    align-self: center;
+}
+
+.contacto__direccion {
+    align-self: center;
 }

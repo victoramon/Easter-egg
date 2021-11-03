@@ -16,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Gluten:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="src/css/card-publicacion.css">
     <link rel="stylesheet" href="src/css/index.css">
     <link rel="stylesheet" href="src/css/perfil.css">
     <script src="src/js/perfil.js"></script>
@@ -124,46 +125,11 @@
                 <!--Cierre div informacion del jugador-->
             </div>
             <!--Columna 2-->
-            <div class="col-md-12 col-sm-6 col-lg-8 feed-publicaciones">
-                <div class="card mt-4 bg-info  text-dark">
-                    <img src="http://www.bogartmagazine.mx/wp-content/uploads/2020/09/Super-Mario-Bros-1.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Mario Bros</h5>
-                        <p class="card-text">Super Mario Bros. tiene lugar en el pacífico Reino Champiñón donde viven
-                            hongos antropomorfos, que fue invadido por los Koopa.
-                            Acompáñame en mi Stram el día Sábado 23 de Octubre en Twitch
-                        </p>
-                        <a href="#" class="btn btn-primary bg-white  text-dark">Like</a>
-                        <a href="#" class="btn btn-primary bg-white  text-dark">Compartir</a>
-                    </div>
+            <!-- Aqui iran las publicaciones -->
+                <div class="col-md-12 col-sm-6 col-lg-8 feed-publicaciones"  id="bloque__publicaciones"> 
                 </div>
-                <div class="card mt-4 bg-info  text-dark">
-                    <img src="https://cdn.alfabetajuega.com/wp-content/uploads/2020/08/553036-jugador-ciego-completa-zelda-ocarina-time-despues-5-anos.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">The Legend of Zelda: Ocarina of Time</h5>
-                        <p class="card-text">La historia del juego se enfoca en el joven héroe Link, que emprende una
-                            aventura en el reino de Hyrule para detener a Ganondorf, rey de la tribu Gerudo,
-                            antes de que encuentre la Trifuerza, una reliquia sagrada capaz de concederle cualquier
-                            deseo a su poseedor. Acompáñame en mi Stram el día Viernes 22 de Octubre en Twitch</p>
-                        <a href="#" class="btn btn-primary bg-white  text-dark">Like</a>
-                        <a href="#" class="btn btn-primary bg-white  text-dark">Compartir</a>
-                    </div>
-                </div>
-                <div class="card mt-4 bg-info  text-dark">
-                    <img src="https://cloudfront-us-east-1.images.arcpublishing.com/elcomercio/7BGFFYG655ELXLNSCFP44XPYZI.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Free Fire</h5>
-                        <p class="card-text">Garena Free Fire es un videojuego battle royale, desarrollado por 111dots
-                            studio​ y publicado por Garena para Android e IOS. Acompáñame en mi Stram el día Sábado 30
-                            de Octubre en Twitch</p>
-                        <a href="#" class="btn btn-primary bg-white  text-dark">Like</a>
-                        <a href="#" class="btn btn-primary bg-white  text-dark">Compartir</a>
-                    </div>
-                </div>
-            </div>
+            <!-- Cierre de publicaciones -->
+            </div><!--Cierre row que contiene todo-->
         </div>
         <!--Cierre row que contiene todo-->
 
@@ -195,6 +161,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
+        <!-- Agregando funciones de JS a Perfil -->
+        <script type="module" src="src/js/perfil.js"></script>
+        <!-- <script src="dist/perfil.js"></script> -->
 </body>
 
 </html>
