@@ -37,7 +37,7 @@ body{
     background: rgba(248, 249, 252, 0.801);
     box-shadow: 0px 0px 10px 0px rgba(250, 249, 252, 0.959);
     border-radius:5px;
-    padding:18px;
+    padding: 8px 18px;
     text-align: center;
     width: 300px;
     opacity:0 ;
@@ -45,7 +45,7 @@ body{
     transform: scale(0.7);
 }
 .pop-up .boton-cerrar-pop-up{
-    font-size: 16px;
+    font-size: 18px;
     line-height: 16px;
     display:block;
     text-align: right;
@@ -54,23 +54,23 @@ body{
 
 }
 .pop-up .boton-cerrar-pop-up:hover{
-    color: cyan;
-    font-size: 20px;
+    color: #0ea4e0;;
+    
 }
 .text-public{
  font-size: 25px; 
  margin-bottom: 10px;  
- color: blue;
- opacity: 0px;
+ color: #1348CF;
+ opacity: 0;
 }
 .pop-up form .contenedor-texto textarea{
 width: 100%;
-margin-bottom: 20px;
+margin-bottom: 5px;
 height: 130px;
-line-height: 50px;
-text-align: center;
-border:1px solid rgba(0, 0, 255, 0.438);
+text-align: left;
 border-radius: 3px;
+border: transparent;
+outline: none;
 opacity: 0;
 }
 
@@ -81,13 +81,13 @@ opacity: 0;
     color: rgb(237, 236, 243);
     background-color: rgba(22, 185, 22, 0.87);
     font-size: 15px;
-    border: radius 3px;
+    border-radius: 3px;
     cursor: pointer;
     transition: .3s  ease all;
     opacity: 0;
 }
 .pop-up form .submit:hover{
-    background: rgb(24, 27, 219, .9);
+    background: #3d84f5;
 }
 /*animaciones del pop-up*/
 .pop-up.active{
@@ -150,8 +150,8 @@ to{
 
   .btnpublicar{
     position: fixed;
-    right: 8px;
-    line-height: 49px;
+    right: 5px;
+    line-height: 45px;
     bottom:30px;
 
   }
@@ -161,7 +161,6 @@ to{
     margin-left: 3%;
     width: 50px;
     height: 50px;
-    border-radius: 1px solid rgb(139, 37, 139);
     border-radius: 50%;
     text-align: center;
     text-decoration:none;
@@ -170,7 +169,7 @@ to{
          
 }
 .msm:hover{
-  color: #0d09f7;
+  color: #3d84f5;
   background: rgba(248, 248, 248, 0.658);
   
  }
@@ -360,8 +359,8 @@ to{
   
   @media (max-width: 991px) {
       
-    .btnpublicar .msm  {
-        color: rgb(133, 16, 148);
+    .btnpublicar .msm:hover  {
+        color: #1348CF;
         
     }
   
@@ -369,12 +368,12 @@ to{
   }
   @media (max-width: 768px) {
       .btnpublicar{
-          padding: 0 100px; 
-          bottom:20px;
+          padding: 0 5px; 
+        
       }
     
       .pop-up{
-        padding: 0 100px; 
+        padding: 1 40px; 
       }
   }  
   
@@ -385,6 +384,6 @@ to{
           padding: 0 50px;
       }
       .pop-up{
-        padding: 0 100px; 
+        padding: 1 40px; 
       }
   }
