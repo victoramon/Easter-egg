@@ -69,6 +69,19 @@ justify-self: center;
 .form__register input{
     border-radius: 1rem;
 }
+
+.form-group p{
+    grid-column: 1 / 4;
+}
+
+.passwordRecovery-link {
+    text-align: right;
+}
+
+.passwordRecovery-link a:hover{
+    color:white;
+}
+
 .btn--login{
     margin: 1rem auto;
     display: flex;
@@ -166,4 +179,84 @@ justify-self: center;
 
 .formulario_input_error_activo{
     display: block;
+}
+
+
+/* Modal para recuperar contraseña // Password recovery */
+
+.passwordRecovery__container{
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+    width:100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color:rgba(0, 0, 0, 0.246);
+    backdrop-filter: blur(5px);
+    display:grid;
+    align-content: center;
+    justify-content: center;
+    transition: opacity .4s;    
+}
+/* Abrir el modal cuando es seleccionado */
+.passwordRecovery__container:target {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  /* Dandole estilo a el boton de cerrar modal */
+.passwordRecovery__container a{
+    color:#005aa1;
+    grid-area: a;
+    align-self: center;
+    justify-self: center;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.passwordRecovery__container a:hover{
+    color:#1070bc;
+}
+
+/* Dandole estilo al formulario */
+.passwordRecovery__form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #005aa1;
+    color: white;
+    font-weight: bold;
+    padding:46px;
+    gap:8px;
+    grid-area: f;
+}
+
+.passwordRecovery__form input {
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: 0;
+    align-self: normal;
+}
+
+.passwordRecovery__form button {
+    background-color:white;
+    border-radius: 11px;
+    border: none;
+    padding:6px 31px;
+    font-weight: bold;
+ }
+
+.passwordRecovery__form button:hover {
+   transform: scale(1.1); 
+}
+
+.passwordRecovery--close i{
+    color:white;
+}
+
+.passwordRecovery--close i:hover{
+    color:rgb(141, 141, 141);
 }

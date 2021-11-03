@@ -1,4 +1,9 @@
+import Swal from '../../node_modules/sweetalert2/src/sweetalert2.js';
+
+
+
 const $formulario_login = document.getElementById("formulario_login");
+
 const $inputs = document.querySelectorAll("#formulario_login input");
 
 const campos = {
@@ -50,7 +55,13 @@ $formulario_login.addEventListener("submit", (e)=>{
         console.log("Fomulario completo")
         //DEBE DE REDIRECCIONAR CUANDO SEA VERDADERA
     }else{
+        e.preventDefault();
         console.log("Entra en el else")
-        alert("Por favor rellena todos los campos")
+        Swal.fire({
+            title: 'Error!',
+            text: 'Por favor rellena todos los campos',
+            icon: 'error',
+            confirmButtonText: 'Okay'
+          })
     }
 });
