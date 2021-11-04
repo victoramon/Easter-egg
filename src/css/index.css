@@ -25,14 +25,36 @@ body::-webkit-scrollbar-thumb {
     color: white;
 }
 
-.navbar {
-    position: fixed;
+header{
     width: 100%;
-    background-color: transparent;
+    position: fixed;
     top: 0;
-    z-index: 5;
+    left: 0;
+    transition: background-color .5s ease;
+    z-index: 1000;
+}
+
+
+.nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: height .5s ease;
     cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🐣</text></svg>"), auto;
 }
+
+/*Aplicacion de cambio de color despues del scroll*/
+.scrolling-active{
+    background-color: #0061a9;
+
+    box-shadow: 0 3px 1rem rgba(0,0,0,.1);
+}
+
+.scrolling-active .nav{
+    height: 6.6rem;
+}
+
 
 .logo {
     color: white;
