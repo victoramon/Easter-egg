@@ -316,6 +316,11 @@ to{
   .recomendaciones{
     margin: 0 auto;
     min-width: 23%;
+    background: linear-gradient(100deg, var(--violet) 25%, var(--turquoise) 50%, var(--violet) 75%);
+    background-repeat: repeat;
+    padding: 2rem;
+    border-radius: 2rem;
+    animation: gradient 5s linear infinite;
   }
   .bloque-de-imagenes div h4{
   
@@ -324,6 +329,20 @@ to{
 .container1{
   width: 90%;
   margin: 0 auto;
+}
+
+@keyframes gradient {
+  0%{
+    background-position: 0 0;
+  }
+
+  50%{
+    background-position: -80rem 0;
+  }
+
+  100%{
+    background-position: 0 0;
+  }
 }
 
   /*publicar
