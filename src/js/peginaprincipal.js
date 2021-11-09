@@ -1,44 +1,40 @@
-import Swal from '../../node_modules/sweetalert2/src/sweetalert2.js';
-
-
-
 const $formulario_login = document.getElementById("formulario_login");
 
 const $inputs = document.querySelectorAll("#formulario_login input");
 
 const campos = {
-    correo:/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+    correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     password: /^.{4,12}$/
 }
 
 //Objeto para validar que todos los cmapos esten llenos
-const llenado_campos={
+const llenado_campos = {
     correo: false,
     password: false
 }
 
-const validar_formulario=(e)=>{
-    switch(e.target.name){
+const validar_formulario = (e) => {
+    switch (e.target.name) {
         case "correo":
             validar_campo(campos.correo, e.target, "correo");
-        break;
+            break;
         case "password":
             validar_campo(campos.password, e.target, "password");
-        break;
+            break;
     }
 }
 
-const validar_campo =(campos, input, label ) =>{
-    if(campos.test(input.value)){//accedemos al valor de los inputs, y con la funcion test(), comprobamos que cumpla con los requisitos preescritos en cosnt camps
+const validar_campo = (campos, input, label) => {
+    if (campos.test(input.value)) {//accedemos al valor de los inputs, y con la funcion test(), comprobamos que cumpla con los requisitos preescritos en cosnt camps
         document.getElementById(`recuadro_${label}`).classList.remove(`recuadro_${label}-incorrecto`);
         document.getElementById(`recuadro_${label}`).classList.add(`recuadro_${label}-correcto`);
         document.querySelector(`#recuadro_${label} .formulario_input_error`).classList.remove("formulario_input_error_activo");
-        llenado_campos[label]=true;//En caso de que todo este correcto, el campo estara lleno
-    }else{
+        llenado_campos[label] = true;//En caso de que todo este correcto, el campo estara lleno
+    } else {
         document.getElementById(`recuadro_${label}`).classList.add(`recuadro_${label}-incorrecto`);
         document.getElementById(`recuadro_${label}`).classList.remove(`recuadro_${label}-correcto`);
         document.querySelector(`#recuadro_${label} .formulario_input_error`).classList.add("formulario_input_error_activo");
-        llenado_campos[label]= false;//En caso de que no este correcto, el campos aparece como no llenado
+        llenado_campos[label] = false;//En caso de que no este correcto, el campos aparece como no llenado
     }
 }
 
@@ -48,18 +44,58 @@ $inputs.forEach(($inputs) => {//Se agrega un evento a cada uno de los inputs del
     $inputs.addEventListener("blur", validar_formulario);//Para cuando den click fuera del input
 })
 
-$formulario_login.addEventListener("submit", (e)=>{
-    if(llenado_campos.correo && llenado_campos.password){
+$formulario_login.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    //var $redirecciona_log_in = document.getElementById("btn_log_in");
+    if (llenado_campos.correo && llenado_campos.password) {
         console.log("Fomulario completo")
-        document.location.href = "../publicaciones.html"
-    }else{
+
+        //Revisar en la base de datos si existe el usuario y contraseña
+        let datos = {};
+        datos.correo = document.querySelector("#InputEmail").value;
+        datos.password = document.querySelector("#InputPassword1").value;;
+
+        const rawResponse = await fetch('/login', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(datos)
+        });
+        const respuesta = await rawResponse.text();
+
+        //Si regreso un NO significa que no existe el usuario
+        if (respuesta == "ERROR") {
+            Swal.fire({
+                title: 'Error al ingresar!',
+                text: 'Revisa que tu contraseña y correo sean correctos',
+                icon: 'question',
+                confirmButtonText: 'Ok'
+            });
+
+        } else if (respuesta == "OK") {
+            await Swal.fire({
+                title: 'Has iniciado sesion!',
+                text: 'En un momento te redireccionaran',
+                icon: 'success',
+                showConfirmButton: false,
+                timer: 2500
+            })
+            await Swal.getConfirmButton(window.location.href = "./publicaciones.html");
+        }
+
+        console.log(respuesta);
+
+        //DEBE DE REDIRECCIONAR CUANDO SEA VERDADERA
+    } else {
         e.preventDefault();
         console.log("Entra en el else")
         Swal.fire({
-            title: 'Error!',
+            title: 'Campos vacios',
             text: 'Por favor rellena todos los campos',
-            icon: 'error',
-            confirmButtonText: 'Okay'
-          })
+            icon: 'warning',
+            confirmButtonText: 'Ok'
+        })
     }
 });

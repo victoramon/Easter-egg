@@ -67,9 +67,9 @@
             </div>
         </nav>
     </header>
-    <div class="container ">
+    <div class="container " >
         <div id="formulario">
-            <form class="text-center form__contacto">
+            <form class="text-center form__contacto" id="form-register">
                 <div class="form-group">
                     <label for="InputName"></label>
                     <input type="name" placeholder="Nombre" class="form-control text-center" id="nombre" />
@@ -99,9 +99,9 @@
                     <p>Sexo</p>
                     <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
                     <select class="custom-select mr-sm-2 " id="inlineFormCustomSelect">
-                        <option value="1">Femenino</option>
-                        <option value="2">Masculino</option>
-                        <option value="3">Otro</option>
+                        <option value="Femenino">Femenino</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Otro">Otro</option>
                     </select>
                 </div>
                 
@@ -110,12 +110,14 @@
                     <input type="date" class="redondeado" name="date" id="start" max="2003-12-31" min="1960-12-31">
                 </div>
 
-               <button type="button" class="form__register--btn button button--janus">
+               <button type="submit" class="form__register--btn button button--janus">
                     <span>Regístrate</span>
                </button>
             </form>
         </div>
     </div>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -125,6 +127,7 @@
         crossorigin="anonymous"></script>
     <!--<script src="src/js/navbar-color.js"></script> -->
     <script src="src/js/navbar-color.js"></script>
+    <script src="src/js/registro.js"></script>
 </body>
 
 </html>
