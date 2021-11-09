@@ -378,6 +378,19 @@ to{
   
   
   @media (max-width: 991px) {
+    .bloque-de-imagenes h4{
+      transform: rotate(270deg) translate(-257px, -140px);
+    }
+
+    .bloque-de-imagenes{
+      position:sticky;
+      transform: rotate(90deg) translateY(-383px);
+    }
+
+    .carousel__item img{
+      transform: rotate(270deg);
+      width: 400px;
+    }
       
     .btnpublicar .msm:hover  {
         color: #1348CF;
@@ -386,7 +399,8 @@ to{
   
   
   }
-  @media (max-width: 768px) {
+  @media (max-width: 768px) {  
+
       .btnpublicar{
           padding: 0 5px; 
         
@@ -399,6 +413,10 @@ to{
   
   
   @media (max-width: 576px) {
+    .bloque-de-imagenes{
+      display: none;
+      visibility: hidden;
+    }
   
     .btnpublicar{
           padding: 0 5px;
