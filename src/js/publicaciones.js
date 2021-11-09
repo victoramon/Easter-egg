@@ -2,6 +2,20 @@
 import {mostrarPublicacion} from './mostrarPublicacion.js';
 import {agregarComentario} from './mostrarPublicacion.js';
 
+/* if(document.readyState === 'complete'){
+        
+        
+}
+ */
+document.onreadystatechange = () => {
+  if (document.readyState === 'complete') {
+    requestUsuarios();
+    console.log("hola");
+  }
+};
+
+
+
 mostrarPublicacion(
         {'id':'1',
         'usuario':'Pedro',
@@ -46,3 +60,34 @@ mostrarPublicacion(
 'titulo':'Jugando capitulo 3 de Doom',
 'descripcion':'Primera partida de Doom Eternal, sigueme en mi Stream, link en mi bio.'
 });
+
+
+
+const requestUsuarios = async () => {
+   const respuesta = await fetch('post/all1', {
+    method: 'GET',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }
+  });
+  const publicacion = await respuesta.json();
+
+  publicacion.forEach(post => {
+    mostrarPublicacion(
+      {'id':`{post.id_usuarios}`,
+      'usuario':'BxbxitoEmoxo',
+      'src':'https://www.muycomputer.com/wp-content/uploads/2020/12/Doom-Eternal-1.jpg',
+      'alternativo':`${post.titulo}`,
+      'titulo':`${post.titulo}`,
+      'descripcion':`${post.descripcion}`
+      });
+
+  });
+/* 
+  
+
+  console.log(publicacion);
+  console.log(`El nombre es ${usuarios.titulo} e id ${usuarios.id_publicaciones}`); */
+
+}
