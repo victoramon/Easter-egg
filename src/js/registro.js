@@ -20,11 +20,12 @@ $formRegisters.addEventListener("submit", async e =>{
         "nombre":$nombre.value,
         "apellido":$apellido.value,
         "sexo":$sexo.value,
-        "nacimiento":$nacimiento.value
+        "nacimiento":$nacimiento.value,
+        "gamerTag":$gamertagg.value
 
     }
 
-    const rawResponse = await fetch('/user', {
+    const rawResponse = await fetch('http://localhost:8080/user', {
     method: 'POST',
     headers: {
       'Accept': 'application/json',

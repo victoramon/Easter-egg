@@ -52,10 +52,10 @@ $formulario_login.addEventListener("submit", async (e) => {
 
         //Revisar en la base de datos si existe el usuario y contraseña
         let datos = {};
-        datos.correo = document.querySelector("#InputEmail").value;
+        datos.username = document.querySelector("#InputEmail").value;
         datos.password = document.querySelector("#InputPassword1").value;;
 
-        const rawResponse = await fetch('/login', {
+        const rawResponse = await fetch('http://localhost:8080/login', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -63,18 +63,26 @@ $formulario_login.addEventListener("submit", async (e) => {
             },
             body: JSON.stringify(datos)
         });
-        const respuesta = await rawResponse.text();
 
-        //Si regreso un NO significa que no existe el usuario
-        if (respuesta == "ERROR") {
-            Swal.fire({
-                title: 'Error al ingresar!',
-                text: 'Revisa que tu contraseña y correo sean correctos',
-                icon: 'question',
-                confirmButtonText: 'Ok'
+        const token = await rawResponse.headers.get('Authorization');
+
+        if (token.includes("Bearer")) {
+            localStorage.setItem("token", token);
+
+            const getIdJson = await fetch('http://localhost:8080/user/getId', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                    'Authorization': localStorage.getItem("token")
+                },
+                body: JSON.stringify(datos)
             });
+            console.log(getIdJson);
 
-        } else if (respuesta == "OK") {
+            const getId = await getIdJson.json();
+            localStorage.setItem("id", getId.idUsuarios);
+
             await Swal.fire({
                 title: 'Has iniciado sesion!',
                 text: 'En un momento te redireccionaran',
@@ -82,12 +90,19 @@ $formulario_login.addEventListener("submit", async (e) => {
                 showConfirmButton: false,
                 timer: 2500
             })
-            await Swal.getConfirmButton(window.location.href = "./publicaciones.html");
+            await Swal.getConfirmButton(window.location.href = "./publicaciones.html"); 
+        } else{
+            localStorage.removeItem("token");
+            Swal.fire({
+                title: 'Error al ingresar!',
+                text: 'Revisa que tu contraseña y correo sean correctos',
+                icon: 'question',
+                confirmButtonText: 'Ok'
+            });
         }
 
-        console.log(respuesta);
+        // const respuesta = await rawResponse.text();
 
-        //DEBE DE REDIRECCIONAR CUANDO SEA VERDADERA
     } else {
         e.preventDefault();
         console.log("Entra en el else")

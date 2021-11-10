@@ -64,7 +64,7 @@ mostrarPublicacion(
 
 
 const requestUsuarios = async () => {
-   const respuesta = await fetch('post/all1', {
+   const respuesta = await fetch('http://localhost:8080/post/all/13', {
     method: 'GET',
     headers: {
       'Accept': 'application/json',
