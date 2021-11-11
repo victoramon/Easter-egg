@@ -1,3 +1,11 @@
+const token = localStorage.getItem('token');
+
+function cargarPagina() {
+    if(token) {
+        window.location.href = "./publicaciones.html";
+    }  
+}
+
 const $formulario_login = document.getElementById("formulario_login");
 
 const $inputs = document.querySelectorAll("#formulario_login input");
@@ -55,6 +63,7 @@ $formulario_login.addEventListener("submit", async (e) => {
         datos.username = document.querySelector("#InputEmail").value;
         datos.password = document.querySelector("#InputPassword1").value;;
 
+        try{
         const rawResponse = await fetch('http://localhost:8080/login', {
             method: 'POST',
             headers: {
@@ -66,7 +75,7 @@ $formulario_login.addEventListener("submit", async (e) => {
 
         const token = await rawResponse.headers.get('Authorization');
 
-        if (token.includes("Bearer")) {
+        if (token && token.includes("Bearer") && rawResponse.status === 200) {
             localStorage.setItem("token", token);
 
             const getIdJson = await fetch('http://localhost:8080/user/getId', {
@@ -78,7 +87,6 @@ $formulario_login.addEventListener("submit", async (e) => {
                 },
                 body: JSON.stringify(datos)
             });
-            console.log(getIdJson);
 
             const getId = await getIdJson.json();
             localStorage.setItem("id", getId.idUsuarios);
@@ -91,7 +99,7 @@ $formulario_login.addEventListener("submit", async (e) => {
                 timer: 2500
             })
             await Swal.getConfirmButton(window.location.href = "./publicaciones.html"); 
-        } else{
+        }  else{
             localStorage.removeItem("token");
             Swal.fire({
                 title: 'Error al ingresar!',
@@ -100,6 +108,15 @@ $formulario_login.addEventListener("submit", async (e) => {
                 confirmButtonText: 'Ok'
             });
         }
+    } catch (error) {
+        Swal.fire({
+            title: '¡Error en el servidor!',
+            text: 'Nuestros monos amaestrados estan haciendo lo posible por arreglarlo ',
+            icon: 'error',
+            confirmButtonText: 'Entendido'
+        });        
+
+    } 
 
         // const respuesta = await rawResponse.text();
 

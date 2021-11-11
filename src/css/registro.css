@@ -36,10 +36,27 @@ body{
     background-color: rgba(0, 4, 255, 0.84);
 
  }
+
+ /* formanteando el formulario de registro */
  .custom-select{
-     color: white;
-     background-color:#0061a9;
+    color: white;
+    background-color:#007fb9;
+    grid-column: 1 / 4;
+    grid-row: 1 / 4;
+    text-align: center;
+    margin: 11px 0;
+    border: 0;
+    padding: 0;
  }
+ .form-select p {
+    grid-column: 1 / 2; 
+    grid-row: 1/4;
+    z-index: 1;
+    text-align: start;
+    align-self: center;
+    margin-inline-start: 10px;
+    margin-bottom: 0;
+}
  .formulario{
     display: flex;
     align-items: center;    

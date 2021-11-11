@@ -1,11 +1,19 @@
 var pic = document.getElementById("seguir").src;
-function seguir(w){
-  if(w==0){
-    pic.textContent="src/img/corazon.png"
-  }else{
-    pic=="src/img/seguido.png"
+function seguir(w) {
+  if (w == 0) {
+    pic.textContent = "src/img/corazon.png"
+  } else {
+    pic == "src/img/seguido.png"
   }
 }
+
+/* Esperar hasta que cargue la pagina para mostrar todo */
+document.onreadystatechange = () => {
+  if (document.readyState === 'complete') {
+    verDatos();
+    requestUsuarios();
+  }
+};
 /**-----popup 
 var btnpublicar = document.getElementById('btnpublicar'),
     overlay = document.getElementById('overlay'),
@@ -24,50 +32,118 @@ overlay.classList.remove('active');
 popup.classList.remove('active');
 });*/
 
-import {mostrarPublicacion} from './mostrarPublicacion.js';
+import { mostrarPublicacion } from './mostrarPublicacion.js';
 
-mostrarPublicacion(
-{'id':'1',
-'usuario':'Meta',
-'src':'https://www.muycomputer.com/wp-content/uploads/2020/12/Cyberpunk-2077-12.jpg',
-'alternativo':'¿Que tal esta cyberpunk?',
-'titulo':'¿Que tal esta cyberpunk?',
-'descripcion':'¿Quieres saber como esta el juego mas esperado de los ultimos años? ¡Sigueme en mi Stream para conocerlo!'
+const $gamerTag = document.querySelector('#gamerTag');
+const $sexo = document.querySelector('#sexo');
+const $nacimiento = document.querySelector('#nacimiento');
+const $nombre = document.querySelector('#nombre');
+const $miembroDesde = document.querySelector('#miembroDesde');
+const $image_perfil = document.querySelector('#img_perfil');
+const url = `http://localhost:8080/user/${localStorage.getItem('id')}`;
+const $boton_foto = document.querySelector('#changePerfilPhoto');
+let url_image;
+
+/* Traera los datos del usuario */
+const verDatos = async () => {
+  const getIdJson = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+      'Authorization': localStorage.getItem("token")
+    },
+  });
+
+  const getId = await getIdJson.json();
+  $gamerTag.textContent = getId.usuarioDatos.gamerTag;
+  $sexo.textContent = "Sexo: " + getId.usuarioDatos.sexo;
+  $nacimiento.textContent = "Fecha de nacimiento:" + getId.usuarioDatos.nacimiento;
+  $nombre.textContent = "Nombre: " + getId.usuarioDatos.nombre;
+  $miembroDesde.textContent = "Miembro desde: " + getId.usuarioDatos.miembroDesde;
+
+  if (getId.usuarioDatos.imgPerfil == null) {
+    $image_perfil.src = "src/img/fotodeperfil.png"
+  } else {
+    $image_perfil.src = getId.usuarioDatos.imgPerfil;
+  }
+}
+
+verDatos();
+
+
+
+$boton_foto.addEventListener('click', async (e) => {
+  await widget_cloudinary.open();
 });
 
-mostrarPublicacion(
-{'id':'2',
-'usuario':'Snowman',
-'src':'http://www.bogartmagazine.mx/wp-content/uploads/2020/09/Super-Mario-Bros-1.jpg',
-'alternativo':'Mario Bros',
-'titulo':'Mario Bros',
-'descripcion':'Super Mario Bros. tiene lugar en el pacífico Reino Champiñón donde viven hongos antropomorfos, que fue invadido por los Koopa. Acompáñame en mi Stram el día Sábado 23 de Octubre en Twitch '
+let widget_cloudinary = cloudinary.createUploadWidget({
+  cloudName: 'dfk9ayr1h',
+  uploadPreset: 'img_perfil',
+  sources: ['local', 'url', 'camera'],
+  defaultSource: 'local',
+  multiple: false,
+  cropping: false
+}, (error, result) => {
+  if (!error && result && result.event === "success") {
+    console.log('Done! Here is the image info: ', result.info);
+    url_image = result.info.url;
+    addImage();
+  }
 });
 
-mostrarPublicacion(
-{'id':'1',
-'usuario':'Kto Tbi',
-'src':'https://cdn.alfabetajuega.com/wp-content/uploads/2020/08/553036-jugador-ciego-completa-zelda-ocarina-time-despues-5-anos.jpg',
-'alternativo':'The Legend of Zelda: Ocarina of Time',
-'titulo':'The Legend of Zelda: Ocarina of Time',
-'descripcion':'La historia del juego se enfoca en el joven héroe Link, que emprende una aventura en el reino de Hyrule para detener a Ganondorf, rey de la tribu Gerudo, antes de que encuentre la Trifuerza, una reliquia sagrada capaz de concederle cualquier deseo a su poseedor.  Acompáñame en mi Stram el día Viernes 22 de Octubre en Twitch'
-});
 
-mostrarPublicacion(
-{'id':'1',
-'usuario':'Alan Mejia',
-'src':'https://cloudfront-us-east-1.images.arcpublishing.com/elcomercio/7BGFFYG655ELXLNSCFP44XPYZI.jpg',
-'alternativo':'Free Fire',
-'titulo':'Free Fire',
-'descripcion':'Free Fire es un videojuego battle royale, desarrollado por 111dots studio​ y publicado por Garena para Android e IOS. Acompáñame en mi Stream el día  Sábado 30 de Octubre en Twitch'
-});
 
-mostrarPublicacion(
-{'id':'1',
-'usuario':'DaniVentur',
-'src':'https://www.muycomputer.com/wp-content/uploads/2020/12/Doom-Eternal-1.jpg',
-'alternativo':'Doom',
-'titulo':'Jugando capitulo 3 de Doom',
-'descripcion':'Primera partida de Doom Eternal, sigueme en mi Stream, link en mi bio.'
-});
+const addImage = async () => {
+  let datos = {};
+  datos.idUsuarios = localStorage.getItem('id');
+  datos.usuarioDatos = {
+    "imgPerfil": url_image,
+  }
 
+  const postImage = await fetch('http://localhost:8080/user/postImgPerfil', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+      'Authorization': localStorage.getItem("token")
+    },
+    body: JSON.stringify(datos)
+  });
+
+  if (postImage.status == 200) {
+    $image_perfil.src = url_image;
+  }
+}
+
+/* Traer todas las publicaciones */
+
+const requestUsuarios = async () => {
+  const respuesta = await fetch(`http://localhost:8080/post/all/${localStorage.getItem("id")}`, {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+      'Authorization': localStorage.getItem("token")
+    }
+  });
+  const publicacion = await respuesta.json();
+  if(publicacion.length == 0){
+    document.getElementById('bloque__publicaciones').innerHTML = `<div class="alert alert-warning" role="alert">
+    El usuario todavia no tiene publicaciones
+  </div>`;
+  }
+
+  publicacion.forEach(post => {
+    mostrarPublicacion(
+      {
+        'id': `{post.id_usuarios}`,
+        'usuario': `${$gamerTag.innerText}`,
+        'src': `${post.imagen}`,
+        'alternativo': `${post.titulo}`,
+        'titulo': `${post.titulo}`,
+        'descripcion': `${post.descripcion}`
+      });
+
+  });
+}
