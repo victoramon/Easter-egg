@@ -4,7 +4,9 @@ export function mostrarPublicacion(datosPublicacion){
     <img src="${datosPublicacion.src}" class="p-2 card-img-top"
      alt="${datosPublicacion.alternativo}" title="${datosPublicacion.titulo}">
     <div class="card-body">
-        <p class="card-text"><small class="">GamerTag: ${datosPublicacion.usuario}</small></p>
+        <a href="./perfil.html?${datosPublicacion.usuario}">
+            <p class="card-text"><small class="">GamerTag: ${datosPublicacion.usuario}</small></p>
+        </a>
         <p class="card-text">${datosPublicacion.descripcion}
         </p>
         <a href="#" class="btn like">
