@@ -74,8 +74,8 @@ const $inputs = document.querySelectorAll("#formulario_registro input");
 
 const datos = {
   nombre: /^[a-zA-ZÀ-ÿ\s]{4,40}$/, // Letras y espacios, pueden llevar acentos.
-  apellido: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
-	gamertagg: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
+  apellido: /^[a-zA-ZÀ-ÿ\s]{3,40}$/,
+	gamertagg: /^[a-zA-Z0-9\_\-]{8,16}$/, // Letras, numeros, guion y guion_bajo
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 	password: /^.{4,12}$/, // 4 a 12 digitos.
 	//fecha_nacimiento: /^(0?[1-9]|[1-9][0-9]|[1][1-9][1-9]|200)$/
