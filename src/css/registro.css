@@ -44,3 +44,72 @@ body{
     display: flex;
     align-items: center;    
 }
+
+.recuadro_nombre-correcto{
+    color: #00FF19;
+}
+
+.recuadro_nombre-incorrecto{
+    color: red;
+    /*minuto 25*/
+}
+.recuadro_apellido-correcto{
+    color: #00FF19;
+}
+
+.recuadro_apellido-incorrecto{
+    color: red;
+    /*minuto 25*/
+}
+
+.recuadro_gamertagg-correcto{
+    color: #00FF19;
+}
+
+.recuadro_gamertagg-incorrecto{
+    color: red;
+    /*minuto 25*/
+}
+
+.recuadro_correo-correcto{
+    color: #00FF19;
+}
+
+.recuadro_correo-incorrecto{
+    color: red;
+    /*minuto 25*/
+}
+
+.recuadro_password-correcto{
+    color: #00FF19;
+}
+
+.recuadro_password-incorrecto{
+    color: red;
+    /*minuto 25*/
+}
+.recuadro_password2-correcto{
+    color: #00FF19;
+}
+
+.recuadro_password2-incorrecto{
+    color: red;
+    /*minuto 25*/
+}
+
+.formulario_input_error{
+    display: none;
+}
+
+.formulario_input_error_activo{
+    display: block;
+}
+
+#formulario_registro p{
+    margin: 0 auto;
+    width: 400px;
+}
+
+#formulario_registro .a123{
+    width: 400px;
+}

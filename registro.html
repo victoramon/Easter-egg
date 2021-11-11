@@ -68,37 +68,42 @@
         </nav>
     </header>
     <div class="container " >
-        <div id="formulario">
-            <form class="text-center form__contacto" id="form-register">
-                <div class="form-group">
+        <div id="formulario_registro">
+            <form class="text-center form__contacto" id="form-register" method="POST">
+                <div class="form-group" id="recuadro_nombre">
                     <label for="InputName"></label>
-                    <input type="name" placeholder="Nombre" class="form-control text-center" id="nombre" />
+                    <input type="name" placeholder="Nombre" class="form-control text-center input_name a123" id="InputName" name="nombre"/>
+                    <p class="formulario_input_error">Nombre entre 4 y 40 caracteres</p>
                 </div>
-                <div class="form-group">
-                    <label for="InputName"></label>
-                    <input type="name" placeholder="Apellido" class="form-control text-center" id="apellido" />
+                <div class="form-group" id="recuadro_apellido">
+                    <label for="InputApellido"></label>
+                    <input type="name" placeholder="Apellido" class="form-control text-center input_apellido a123" id="InputApellido" name="apellido"/>
+                    <p class="formulario_input_error">Apellido entre 3 y 40 caracteres</p>
                 </div>
-                <div class="form-group">
-                    <label for="InputName"></label>
-                    <input type="name" placeholder="GamerTagg" class="form-control text-center" id="gamertagg" />
+                <div class="form-group" id="recuadro_gamertagg">
+                    <label for="InputGamertagg"></label>
+                    <input type="name" placeholder="GamerTagg" class="form-control text-center input_gamertagg a123" id="InputGamertagg" name="gamertagg"/>
+                    <p class="formulario_input_error">Puede tener letras, numeros, guiones, guion bajo y entre 8 y 16 caracteres</p>
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1"></label>
-                    <input type="email" placeholder="Correo" class="form-control text-center" id="correo" />
+                <div class="form-group" id="recuadro_correo">
+                    <label for="InputCorreo"></label>
+                    <input type="email" placeholder="Correo" class="form-control text-center input_correo recuadro_correo a123" id="InputCorreo" name="correo"/>
+                    <p class="formulario_input_error">Escribe un correo valido example@example.example</p>    
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1"></label>
-                    <input type="password" placeholder="Contraseña" class="form-control text-center" id="contrasenia" />
+                <div class="form-group" id="recuadro_password">
+                    <label for="InputPassword1"></label>
+                    <input type="password" placeholder="Contraseña" class="form-control text-center input_password a123" id="InputPassword1" name="password"/>
+                    <p class="formulario_input_error">La contraseña tiene que ser de 4 a 16 digitos</p>
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1"></label>
-                    <input type="password" placeholder="Confirma Contraseña" class="form-control text-center" id="contrasenia2" />
+                <div class="form-group" id="recuadro_password2">
+                    <label for="InputPassword2"></label>
+                    <input type="password" placeholder="Confirma Contraseña" class="form-control text-center input_password2 a123" id="InputPassword2" name="password2"/>
+                    <p class="formulario_input_error">Ambas contraseñas deben ser iguales</p>
                 </div>
 
                 <div class="form-group">
-                    <p>Sexo</p>
-                    <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
-                    <select class="custom-select mr-sm-2 " id="inlineFormCustomSelect">
+                    <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preferencia</label>
+                    <select class="custom-select mr-sm-2 a123" id="inlineFormCustomSelect">
                         <option value="Femenino">Femenino</option>
                         <option value="Masculino">Masculino</option>
                         <option value="Otro">Otro</option>
@@ -106,8 +111,10 @@
                 </div>
                 
                     Fecha de Nacimiento
-                <div class="form-group">
-                    <input type="date" class="redondeado" name="date" id="start" max="2003-12-31" min="1960-12-31">
+                <div class="form-group" id="fecha_nacimiento">
+                    <label for="InputFechanacimiento"></label>
+                    <input type="date" class="redondeado input_fechanacimiento" name="fecha_nacimiento" id="InputFechanacimiento" max="2003-12-31" min="1960-12-31">
+                    <p class="formulario_input_error">Escribe un correo valido example@example.example</p>
                 </div>
 
                <button type="submit" class="form__register--btn button button--janus">
