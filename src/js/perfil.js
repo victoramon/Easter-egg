@@ -12,6 +12,7 @@ document.onreadystatechange = () => {
   if (document.readyState === 'complete') {
     verDatos();
     requestUsuarios();
+    displayButtonChangePerfilImg();
   }
 };
 /**-----popup 
@@ -40,14 +41,31 @@ const $nacimiento = document.querySelector('#nacimiento');
 const $nombre = document.querySelector('#nombre');
 const $miembroDesde = document.querySelector('#miembroDesde');
 const $image_perfil = document.querySelector('#img_perfil');
-const url = `http://localhost:8080/user/${localStorage.getItem('id')}`;
 const $boton_foto = document.querySelector('#changePerfilPhoto');
+
+let urlFetch;
 let url_image;
 
+if(window.location.search != ''){
+  urlFetch = window.location.search.slice(1,3);
+} else {
+  urlFetch = localStorage.getItem('id');  
+}
+
+/* Mostrar el boton de cambiar imagen de perfil solo si es el usuario logeuado */
+const displayButtonChangePerfilImg = () => {
+  if(urlFetch != localStorage.getItem('id')){
+    $boton_foto.style.display = 'none';
+  }
+};
+
 /* Traera los datos del usuario */
+
 const verDatos = async () => {
-  const getIdJson = await fetch(url, {
-    method: 'POST',
+
+try{
+  const getIdJson = await fetch(`http://localhost:8080/user/datos?id=${urlFetch}`, {
+    method: 'GET',
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
@@ -56,6 +74,7 @@ const verDatos = async () => {
   });
 
   const getId = await getIdJson.json();
+
   $gamerTag.textContent = getId.usuarioDatos.gamerTag;
   $sexo.textContent = "Sexo: " + getId.usuarioDatos.sexo;
   $nacimiento.textContent = "Fecha de nacimiento:" + getId.usuarioDatos.nacimiento;
@@ -67,9 +86,19 @@ const verDatos = async () => {
   } else {
     $image_perfil.src = getId.usuarioDatos.imgPerfil;
   }
+} catch(error){
+  await Swal.fire({
+    title: 'Usuario no encontrado!',
+    text: 'El usuario no existe o borro su cuenta',
+    icon: 'alert',
+    showConfirmButton: false,
+    timer: 2500
+  })
+  await Swal.getConfirmButton(window.location.href = "./perfil.html");
 }
 
-verDatos();
+
+}
 
 
 
@@ -119,7 +148,7 @@ const addImage = async () => {
 /* Traer todas las publicaciones */
 
 const requestUsuarios = async () => {
-  const respuesta = await fetch(`http://localhost:8080/post/all/${localStorage.getItem("id")}`, {
+  const respuesta = await fetch(`http://localhost:8080/post/all?id=${urlFetch}`, {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
@@ -137,7 +166,7 @@ const requestUsuarios = async () => {
   publicacion.forEach(post => {
     mostrarPublicacion(
       {
-        'id': `{post.id_usuarios}`,
+        'id': `${urlFetch}`,
         'usuario': `${$gamerTag.innerText}`,
         'src': `${post.imagen}`,
         'alternativo': `${post.titulo}`,
