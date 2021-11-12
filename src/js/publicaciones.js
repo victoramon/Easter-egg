@@ -28,9 +28,8 @@ const requestUsuarios = async () => {
 
   publicacion.forEach(post => {
     post.publicaciones.forEach(pub => {
-      console.log(pub);
       mostrarPublicacion(
-        {'id':`${post.id_usuarios}`,
+        {'id':`${post.idUsuarios}`,
         'usuario':`${post.usuarioDatos.gamerTag}`,
         'src':`${pub.imagen}`,
         'alternativo':`${pub.titulo}`,
