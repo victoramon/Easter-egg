@@ -129,7 +129,7 @@ body{
   border-radius:5px;
   padding: 8px 18px;
   text-align: center;
-  width: 300px;
+  width: 350px;
   opacity:0 ;
   transition: .1s ease all;
   transform: scale(0.7);
@@ -148,31 +148,83 @@ body{
   color: #0ea4e0;
   
 }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 .text-public {
 font-size: 25px; 
 margin-bottom: 10px; 
 color: #1749d1;
+font-family: 'Poppins', sans-serif;
 opacity: 0;
 }
 
-.pop-up form .contenedor-texto textarea{
-width: 100%;
-margin-bottom: 5px;
-height: 130px;
-text-align: left;
-border:transparent;
-outline: none;
-border-radius: 3px;
-opacity: 0;
+
+.image-container{
+  width: 100%;
+}
+.image-container img{
+  display: block;
+  position: relative;
+  max-width: 100%;
+  max-height: 160px;
+  margin: auto;
+  background-size: cover;
+  box-shadow: 3px 0px 30px 0px rgba(53, 135, 230, 0.959);
+  border-radius: 5px;  
+}
+
+.cont .img-galery{
+  width: 28px;
+  height: 28px;
+}
+figcaption{
+  margin: 1px;
+  color:transparent;
+  text-align: center;
+   
+
+}
+input[type="file"]{
+  display: none;
+}
+.pop-up .cont label{
+ 
+  font-size: 16px;
+  text-align: center;
+  width: 100px;
+  height: 40px;
+  padding: 3px;
+  margin: auto;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  opacity: 0;
+}
+.cont p{
+  color: #51aaf3;
+}
+
+
+.pop-up form  textarea{
+  width: 100%;
+  text-align: left;
+  border-radius: 8px;
+  border:none;
+  outline: none;
+  resize: none;
+  margin:0px;
+  border:transparent;
+  min-height: 100px;
+  opacity: 0;
 }
 
 .pop-up form .submit {
   padding: 0 10px;
   height: 40px;
+  width: 200px;
   border: none;
   color: rgb(237, 236, 243);
-  background-color: rgba(22, 185, 22, 0.87);
+  background-color: rgba(97, 136, 219, 0.87);
   font-size: 15px;
   border-radius: 3px;
   cursor: pointer;
@@ -180,9 +232,12 @@ opacity: 0;
   opacity: 0;
 
 }
-.pop-up form .submit:hover{
-  background: #3D84F5;
+.pop-up form textarea:valid ~ .submit{
+  color: white;
+  background-color: rgba(16, 78, 212, 0.87);
+  cursor:pointer;  
 }
+
 /*animaciones del pop-up*/
 .pop-up.active{
 opacity: 1;
@@ -193,12 +248,24 @@ transform: scale(1);
 animation: entrada .8s ease .3s forwards;
 
 }
-.pop-up.active .contenedor-texto textarea{
+.pop-up.active  textarea{
 animation: txt 1s ease 1s forwards;
 }
-
+.pop-up.active  label{
+  animation: img 1s ease 1s forwards;
+}
 .pop-up.active .submit{
 animation: submit 1s ease 1s forwards;
+}
+@keyframes img{
+  from{
+    transform:translateY(-20PX) ;
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 @keyframes entrada{
 from{
