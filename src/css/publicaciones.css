@@ -39,7 +39,7 @@ body{
     border-radius:5px;
     padding: 8px 18px;
     text-align: center;
-    width: 300px;
+    width: 350px;
     opacity:0 ;
     transition: .1s ease all;
     transform: scale(0.7);
