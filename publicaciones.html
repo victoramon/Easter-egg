@@ -126,9 +126,20 @@
                 <h3 class="text-public">Agregar publicación</h3>
                 <hr>
                 <form action="">
-                    <div class="contenedor-texto ">
-                        <textarea  type=" text " ></textarea>
-                      </div>
+                     <textarea  type=" text " ></textarea>
+                        <div class="cont" >
+                  
+                            <figure class="image-container" id="image-container">
+                                <img id="chosen-image"  >
+                                <figcaption id="file-name"></figcaption>
+                            </figure>
+                            <input type="file" id="upload-button"  accept="image/*">
+                            <label for="upload-button"> 
+                           <img src="src/img/gallery.svg" alt="" class="img-galery">
+                           <br><p>agregar foto</p></label>
+                            
+                        
+                    </div>
                         <input  type="submit" class="submit btn-submit " value="publicar">
       
                       </form>
