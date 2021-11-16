@@ -1,3 +1,4 @@
+
 export function mostrarPublicacion(datosPublicacion){
     const publicacionHTML = `<div class="card">
     <h5 class="card-header">${datosPublicacion.titulo}</h5>
@@ -5,30 +6,32 @@ export function mostrarPublicacion(datosPublicacion){
     alt="${datosPublicacion.alternativo}" title="${datosPublicacion.titulo}">
     <div class="card-body">
         <a href="./perfil.html?${datosPublicacion.id}">
-            <p class="card-text"><small class="">GamerTag: ${datosPublicacion.usuario}</small></p>
+            <p class="card-text"><small class="text-dark">Ver usuario</small></p>
         </a>
         <p class="card-text">${datosPublicacion.descripcion}
         </p>
 
-        <div class="row">
+        <div class="row opcionesPublicaciones">
         <a href="#" class="btn like">
         <i class='bx bxs-like'></i> Me gusta</a>
         <a href="#" class="btn share">
         <i class='bx bxs-share-alt' ></i> Compartir
         </a>
-        <div class="btn-group" role="group" style="margin-left:auto; padding-right:12px">
+
+        <div class="btn-group" role="group" style="margin-left:auto; padding-right:12px" id="opcionesPublicacion">
         <button id="btnGroupDrop1" type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
         Opciones
         </button>
         <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-        <a class="dropdown-item" href="#">Editar</a>
-        <a class="dropdown-item" href="#">Eliminar</a>
+        <a class="dropdown-item" href="./editarPublicacion.html?${datosPublicacion.idPublicaciones}">Editar</a>
+        <button class="dropdown-item" onclick="eliminarPub(${datosPublicacion.idPublicaciones})")>Eliminar</button>
         </div>
         </div>
+        
+        
         </div>
-
-    </div>
-    <div class="card-footer">
+        </div>
+        <div class="card-footer">
         <div id="comentarios"></div>
             <small class="">Comentarios</small>
             <div class="form__message">

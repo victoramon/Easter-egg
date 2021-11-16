@@ -2,6 +2,22 @@
 import {mostrarPublicacion} from './mostrarPublicacion.js';
 import {agregarComentario} from './mostrarPublicacion.js';
 
+let pagina = 0;
+
+//creamos el observador para que se cargen indefinidamente las publicaciones
+let observador = new IntersectionObserver((entradas, observador)=>{
+  entradas.forEach(entrada => {
+    if(entrada.isIntersecting){
+      pagina++;
+      requestUsuarios();
+    }
+  })
+
+}, {
+  rootMargin: '0px 0px 200px 0px',
+  threshold: 1.0
+});
+
 /* if(document.readyState === 'complete'){
         
         
@@ -16,7 +32,8 @@ document.onreadystatechange = () => {
 
 
 const requestUsuarios = async () => {
-   const respuesta = await fetch('http://localhost:8080/user/posts/all', {
+
+   const respuesta = await fetch(`https://eastereggbackend.herokuapp.com/posts/all?page=${pagina}&size=5`, {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
@@ -26,17 +43,27 @@ const requestUsuarios = async () => {
   });
   const publicacion = await respuesta.json();
 
-  publicacion.forEach(post => {
-    post.publicaciones.forEach(pub => {
-      mostrarPublicacion(
-        {'id':`${post.idUsuarios}`,
-        'usuario':`${post.usuarioDatos.gamerTag}`,
-        'src':`${pub.imagen}`,
-        'alternativo':`${pub.titulo}`,
-        'titulo':`${pub.titulo}`,
-        'descripcion':`${pub.descripcion}`
-        });
-    })
+  if(publicacion.length === 0){
+    document.querySelector('#bloque__publicaciones').innerHTML += `<div class="alert alert-warning" role="alert">
+    Ya no hay mas publicaciones, intenta seguir mas gente
+  </div>`;
+    return;
+  };
 
+  publicacion.forEach(post => {
+      mostrarPublicacion(
+        {'id':`${post.idUsuario}`,
+        'idPublicaciones':`${post.idPublicaciones}`,
+        'usuario':`${post.nameUsuario}`,
+        'src':`${post.imagen}`,
+        'alternativo':`${post.titulo}`,
+        'titulo':`${post.titulo}`,
+        'descripcion':`${post.descripcion}`
+        }); 
   });
+
+  const publicacionesEnPantalla = document.querySelectorAll('.feed-publicaciones .card');
+  let ultimaPublicacion = publicacionesEnPantalla[publicacionesEnPantalla.length - 1];
+  observador.observe(ultimaPublicacion);
+
 }

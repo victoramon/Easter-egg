@@ -110,7 +110,7 @@ $formulario_registro.addEventListener("submit",async (e)=>{
     }
 
     try{
-    const rawResponse = await fetch('http://localhost:8080/user', {
+    const rawResponse = await fetch('https://eastereggbackend.herokuapp.com/user', {
     method: 'POST',
     headers: {
       'Accept': 'application/json',

@@ -1,0 +1,9 @@
+.pop-up{
+    opacity: 1;
+    transform: scale(1);
+    width: auto;
+}
+
+.pop-up form textarea, .pop-up #tituloPost, .pop-up label, .text-public, .pop-up .cont label, .pop-up form .submit{
+    opacity: 1;
+}
