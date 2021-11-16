@@ -27,9 +27,11 @@
       href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="src/css/publicaciones.css">
     <link rel="stylesheet" href="src/css/card-publicacion.css" />
     <link rel="stylesheet" href="src/css/index.css" />
     <link rel="stylesheet" href="src/css/perfil.css" />
+    <link rel="stylesheet" href="src/css/card-publicacion.css">
     <script src="src/js/perfil.js"></script>
 
  
@@ -185,28 +187,39 @@
     </div>
     <!--Cierre row que contiene todo-->
 
-    <!--ventana emergente pop-up-->
-    <!--case overlay para el fondo oscuro-->
-    <div class="overlay" id="overlay">
-      <div class="pop-up" id="pop-up">
-        <a href="#" class="boton-cerrar-pop-up" id="boton-cerrar-pop-up">
-          <i class="bx bx-x"></i>
-        </a>
-        <h3 class="text-public">Agregar publicación</h3>
-        <hr />
-        <form action="">
-          <div class="contenedor-texto">
-            <textarea type=" text "></textarea>
+     <!--ventana emergente pop-up-->
+        <!--case overlay para el fondo oscuro-->
+        <div class="overlay " id="overlay">
+          <div class="pop-up" id="pop-up">
+              <a href="#" class="boton-cerrar-pop-up" id="boton-cerrar-pop-up">
+                  <i class="bx bx-x"></i> 
+              </a>
+                  <h3 class="text-public">Agregar publicación</h3>
+                  <hr>
+                  <form action=""  class="post" id="post"  method="post" enctype="multipart/form-data" >
+                      <label for="tituloPost">Titulo</label>
+                      <input type="text" name="tituloPost" id="tituloPost" autocomplete="off">
+                      <label for="descripcionPost">Descripcion</label> 
+                      <textarea  type=" text " id="descripcionPost" name="descripcionPost"></textarea>
+                          <div class="cont" >
+                    
+                              <figure class="image-container" id="image-container">
+                                  <img id="chosen-image"  >
+                                  <figcaption id="file-name"></figcaption>
+                              </figure>
+                              <input type="button" id="upload-button"  accept="image/*" style="display: none;">
+                              <label for="upload-button"> 
+                             <img src="src/img/gallery.svg" alt="" class="img-galery">
+                             <br><p>agregar foto</p></label>
+                              
+                          
+                      </div>
+                          <input  type="submit" class="submit btn-submit " value="publicar">
+        
+                        </form>
           </div>
-          <input
-            type="submit"
-            class="submit"
-            class="btn-submit"
-            value="publicar"
-          />
-        </form>
+  
       </div>
-    </div>
     <!-- Revisar si esta con sesion activa -->
     <script src="src/js/isLogged.js"></script>
 
@@ -230,10 +243,19 @@
     <!--- <script src="src/js/publicaciones.js"></script>-->
     <script src="src/js/ventanaemerg.js"></script>
     <script src="src/js/navbar-color.js"></script>
+
+    <!-- Sweel Alter -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Scrip para eliminar publicacion -->
+    <script src="src/js/eliminarPublicacion.js"></script>
+
      <!-- Librerias para subir imagen -->
     <script 
       src="https://upload-widget.cloudinary.com/global/all.js"
       type="text/javascript"
     ></script>
+    <!--<script src="src/js/publicaciones.js"></script> -->
+    <script type="module" src="src/js/ventanaemerg.js"></script>
   </body>
 </html>

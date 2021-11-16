@@ -12,8 +12,10 @@
     />
 
     <link rel="stylesheet" href="src/css/index.css" type="text/css" />
-    <link rel="stylesheet" href="src/css/registro.css" type="text/css" />
+    <link rel="stylesheet" href="src/css/card-publicacion.css">
+    <link rel="stylesheet" href="src/css/publicaciones.css">
     <link rel="stylesheet" href="src/css/boton.css" />
+    <link rel="stylesheet" href="src/css/editarPublicacion.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,7 +39,8 @@
     <title>Registro</title>
   </head>
 
-  <body>
+  <body onload="cargarPagina()">
+    <div class="loader" id="loader"></div>
     <!--BARRA-->
     <header>
       <nav class="navbar navbar-expand-lg navbar-light color">
@@ -99,53 +102,49 @@
       </nav>
     </header>
 
-    <div class="container">
-      <div id="formulario_registro">
-        <form
-          class="text-center form__contacto"
-          id="form-register"
-          method="POST"  >
-          <div class="form-group" id="recuadro_nombre">
-            <label for="InputName"></label>
-            <input
-              type="name"
-              placeholder="Titulo"
-              class="form-control text-center input_name a123"
-              id="InputName"
-              name="nombre"
-            />
-          </div>
-          <div class="form-group" id="recuadro_apellido">
-            <label for="InputApellido"></label>
-            <input
-              type="name"
-              placeholder="Descripcion"
-              class="form-control text-center input_apellido a123"
-              id="InputApellido"
-              name="apellido"
-            />
-          </div>
-          <div class="form-group" id="recuadro_gamertagg">
-            <label for="InputGamertagg"></label>
-            <input
-              type="name"
-              placeholder="Imagen"
-              class="form-control text-center input_gamertagg a123"
-              id="InputGamertagg"
-              name="gamertagg"
-            />
-            </div>
-         
+    <div class="container"  id="content" style="display: none;">
+      <div class="row">
 
-          <button
-            type="submit"
-            class="form__register--btn button button--janus"
-          >
-            <span>Modificar</span>
-          </button>
-        </form>
+        <div class="col-6" id="bloque__publicaciones">
+
+        </div>
+
+        <div class="col-6">
+            <div class="pop-up" id="pop-up">
+                <a href="#" class="boton-cerrar-pop-up" id="boton-cerrar-pop-up">
+                    <i class="bx bx-x"></i> 
+                </a>
+                    <h3 class="text-public">Editar publicación</h3>
+                    <hr>
+                    <form action=""  class="post" id="post"  method="post" enctype="multipart/form-data" >
+                        <label for="tituloPost">Titulo</label>
+                        <input type="text" name="tituloPost" id="tituloPost" autocomplete="off">
+                        <label for="descripcionPost">Descripcion</label> 
+                        <textarea  type=" text " id="descripcionPost" name="descripcionPost"></textarea>
+                            <div class="cont" >
+                      
+                                <figure class="image-container" id="image-container">
+                                    <img id="chosen-image"  >
+                                    <figcaption id="file-name"></figcaption>
+                                </figure>
+                                <input type="button" id="upload-button"  accept="image/*" style="display: none;">
+                                <label for="upload-button"> 
+                               <img src="src/img/gallery.svg" alt="" class="img-galery">
+                               <br><p>agregar foto</p></label>
+                                
+                            
+                        </div>
+                            <input  type="submit" class="submit btn-submit " value="publicar">
+          
+                          </form>
+            </div>
+    
+        </div>
       </div>
     </div>
+
+    <!-- Revisar si esta con sesion activa -->
+    <script src="src/js/isLogged.js"></script>
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
@@ -163,6 +162,10 @@
     ></script>
     <!--<script src="src/js/navbar-color.js"></script> -->
     <script src="src/js/navbar-color.js"></script>
+
+    <!-- Scrip para eliminar publicacion -->
+<script src="src/js/eliminarPublicacion.js"></script>
+
     <script 
       src="https://upload-widget.cloudinary.com/global/all.js"
       type="text/javascript"

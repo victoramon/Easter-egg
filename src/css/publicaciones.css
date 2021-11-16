@@ -109,7 +109,7 @@ input[type="file"]{
   color: #51aaf3;
 }
 
-.pop-up form  textarea{
+.pop-up form  textarea, .pop-up #tituloPost{
 width: 100%;
 min-height: 100px;
 text-align: left;
@@ -120,6 +120,17 @@ border: none;
 resize: none;
 margin: 0px;
 opacity: 0;
+}
+
+.pop-up label{
+  transition: .3s  ease all;
+  opacity: 0;
+}
+
+.pop-up #tituloPost{
+  min-height: 16px;
+  margin-bottom: 16px;
+  padding: 8px;
 }
 
 .pop-up form .submit {
@@ -151,7 +162,7 @@ opacity: 0;
   animation: entrada .8s ease .3s forwards;
   
 }
-.pop-up.active  textarea{
+.pop-up.active  textarea, .pop-up.active #tituloPost{
   animation: txt 1s ease 1s forwards;
 }
 .pop-up.active  label{

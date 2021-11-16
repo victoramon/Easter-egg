@@ -100,11 +100,11 @@ try{
 
 }
 
-
-
 $boton_foto.addEventListener('click', async (e) => {
   await widget_cloudinary.open();
 });
+
+
 
 let widget_cloudinary = cloudinary.createUploadWidget({
   cloudName: 'dfk9ayr1h',
@@ -165,8 +165,9 @@ const requestUsuarios = async () => {
 
   publicacion.forEach(post => {
     mostrarPublicacion(
-      {
+      {        
         'id': `${urlFetch}`,
+        'idPublicaciones':`${post.idPublicaciones}`,
         'usuario': `${$gamerTag.innerText}`,
         'src': `${post.imagen}`,
         'alternativo': `${post.titulo}`,
