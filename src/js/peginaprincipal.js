@@ -64,7 +64,7 @@ $formulario_login.addEventListener("submit", async (e) => {
         datos.password = document.querySelector("#InputPassword1").value;;
 
         try{
-        const rawResponse = await fetch('http://localhost:8080/login', {
+        const rawResponse = await fetch('https://eastereggbackend.herokuapp.com/login', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -78,7 +78,7 @@ $formulario_login.addEventListener("submit", async (e) => {
         if (token && token.includes("Bearer") && rawResponse.status === 200) {
             localStorage.setItem("token", token);
 
-            const getIdJson = await fetch('http://localhost:8080/user/getId', {
+            const getIdJson = await fetch('https://eastereggbackend.herokuapp.com/user/getId', {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',

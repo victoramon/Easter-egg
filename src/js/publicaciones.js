@@ -33,7 +33,7 @@ document.onreadystatechange = () => {
 
 const requestUsuarios = async () => {
 
-   const respuesta = await fetch(`http://localhost:8080/posts/all?page=${pagina}&size=5`, {
+   const respuesta = await fetch(`https://eastereggbackend.herokuapp.com/posts/all?page=${pagina}&size=5`, {
     method: 'POST',
     headers: {
       'Accept': 'application/json',

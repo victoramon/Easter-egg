@@ -17,7 +17,7 @@ const eliminarPub = async(id) => {
 const revisarUsuario = async (id) => {
 
     try{
-      const getPostJson = await fetch(`http://localhost:8080/post/${id}`, {
+      const getPostJson = await fetch(`https://eastereggbackend.herokuapp.com/post/${id}`, {
         method: 'GET',
         headers: {
           'Accept': 'application/json',
@@ -48,7 +48,7 @@ const revisarUsuario = async (id) => {
   }
 
 const eliminandoPub = async (id) =>{
-    const getPostJson = await fetch(`http://localhost:8080/post/delete/${id}`, {
+    const getPostJson = await fetch(`https://eastereggbackend.herokuapp.com/post/delete/${id}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

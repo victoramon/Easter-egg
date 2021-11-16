@@ -64,7 +64,7 @@ const displayButtonChangePerfilImg = () => {
 const verDatos = async () => {
 
 try{
-  const getIdJson = await fetch(`http://localhost:8080/user/datos?id=${urlFetch}`, {
+  const getIdJson = await fetch(`https://eastereggbackend.herokuapp.com/user/datos?id=${urlFetch}`, {
     method: 'GET',
     headers: {
       'Accept': 'application/json',
@@ -130,7 +130,7 @@ const addImage = async () => {
     "imgPerfil": url_image,
   }
 
-  const postImage = await fetch('http://localhost:8080/user/postImgPerfil', {
+  const postImage = await fetch('https://eastereggbackend.herokuapp.com/user/postImgPerfil', {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
@@ -148,7 +148,7 @@ const addImage = async () => {
 /* Traer todas las publicaciones */
 
 const requestUsuarios = async () => {
-  const respuesta = await fetch(`http://localhost:8080/post/all?id=${urlFetch}`, {
+  const respuesta = await fetch(`https://eastereggbackend.herokuapp.com/post/all?id=${urlFetch}`, {
     method: 'POST',
     headers: {
       'Accept': 'application/json',

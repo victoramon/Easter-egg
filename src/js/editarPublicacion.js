@@ -19,7 +19,7 @@ if(window.location.search != ''){
 const verDatos = async () => {
 
   try{
-    const getPostJson = await fetch(`http://localhost:8080/post/${urlFetch}`, {
+    const getPostJson = await fetch(`https://eastereggbackend.herokuapp.com/post/${urlFetch}`, {
       method: 'GET',
       headers: {
         'Accept': 'application/json',
@@ -95,7 +95,7 @@ $postForm.addEventListener('submit', async (e) => {
     datos.descripcion = $descripcionPost.value;
     datos.titulo = $tituloPost.value;
 
-    const postImage = await fetch(`http://localhost:8080/post/edit?id=${urlFetch}`, {
+    const postImage = await fetch(`https://eastereggbackend.herokuapp.com/post/edit?id=${urlFetch}`, {
       method: 'POST',
       headers: {
         'Accept': 'application/json',

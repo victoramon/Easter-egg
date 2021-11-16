@@ -69,7 +69,7 @@ let widget_cloudinary = cloudinary.createUploadWidget({
       datos.descripcion = $descripcionPost.value;
       datos.titulo = $tituloPost.value;
   
-      const postImage = await fetch('http://localhost:8080/post', {
+      const postImage = await fetch('https://eastereggbackend.herokuapp.com/post', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
